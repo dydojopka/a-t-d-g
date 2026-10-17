@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://addons/ascii_renderer/ascii_renderer.gd" id="1_script"]
+[ext_resource type="Shader" path="res://addons/ascii_renderer/ascii.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" path="res://addons/ascii_renderer/textures/ascii_16.svg" id="3_atlas"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ascii"]
+shader = ExtResource("2_shader")
+shader_parameter/ascii_atlas = ExtResource("3_atlas")
+
+[node name="AsciiRenderer" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_script")
+
+[node name="Screen" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ascii")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
