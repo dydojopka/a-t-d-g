@@ -1,0 +1,24 @@
+# Godot 4+ specific ignores
+.godot/
+*.translation
+/android/
+
+# Exported builds (keep exports inside these directories).
+/build/
+/builds/
+/dist/
+/exports/
+
+# Local export credentials and environment settings.
+export_credentials.cfg
+.env
+.env.*
+!.env.example
+
+# Editor and operating system temporary files.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*~
