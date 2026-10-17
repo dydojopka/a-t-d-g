@@ -1,0 +1,69 @@
+{
+  "cell_size": 8,
+  "glyphs": [
+    {
+      "character": " ",
+      "filled_pixels": 0
+    },
+    {
+      "character": ".",
+      "filled_pixels": 1
+    },
+    {
+      "character": ":",
+      "filled_pixels": 2
+    },
+    {
+      "character": ",",
+      "filled_pixels": 3
+    },
+    {
+      "character": "-",
+      "filled_pixels": 4
+    },
+    {
+      "character": ";",
+      "filled_pixels": 5
+    },
+    {
+      "character": "~",
+      "filled_pixels": 6
+    },
+    {
+      "character": "+",
+      "filled_pixels": 9
+    },
+    {
+      "character": "=",
+      "filled_pixels": 10
+    },
+    {
+      "character": "c",
+      "filled_pixels": 11
+    },
+    {
+      "character": "o",
+      "filled_pixels": 14
+    },
+    {
+      "character": "%",
+      "filled_pixels": 15
+    },
+    {
+      "character": "*",
+      "filled_pixels": 17
+    },
+    {
+      "character": "#",
+      "filled_pixels": 20
+    },
+    {
+      "character": "M",
+      "filled_pixels": 22
+    },
+    {
+      "character": "@",
+      "filled_pixels": 25
+    }
+  ]
+}
