@@ -1,0 +1,16 @@
+{
+  "ui.test_room.title": "ИСПЫТАТЕЛЬНОЕ ПРОСТРАНСТВО",
+  "ui.test_room.subtitle": "ОСМОТР / ДВИЖЕНИЕ / ЦВЕТНОЙ ASCII",
+  "ui.controls.movement": "[W A S D] перемещение",
+  "ui.controls.look": "[МЫШЬ] осмотр",
+  "ui.controls.sprint": "[SHIFT] бег — удерживать",
+  "ui.controls.crouch": "[CTRL] присесть — удерживать",
+  "ui.controls.release_mouse": "[ESC] освободить курсор",
+  "ui.controls.capture_mouse": "[ЛКМ] вернуться к осмотру",
+  "ui.controls.help": "[F1] подсказки",
+  "ui.test_room.hint_captured": "[F1] управление  /  [ESC] курсор",
+  "ui.test_room.hint_released": "КУРСОР СВОБОДЕН  /  [ЛКМ] продолжить осмотр",
+  "ui.test_room.state_walk": "ШАГ",
+  "ui.test_room.state_sprint": "БЕГ",
+  "ui.test_room.state_crouch": "ПРИСЕД"
+}
