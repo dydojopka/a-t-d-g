@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/ceiling.tres" id="1_xsgq4"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/ceiling_1m.res" id="2_dsfov"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pny3t"]
+data = PackedVector3Array(0, 0, 0, 1, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0.12, 0, 1, 0.12, -1, 1, 0.12, 0, 0, 0.12, 0, 0, 0.12, -1, 1, 0.12, -1, 0, 0, 0, 1, 0.12, 0, 1, 0, 0, 0, 0, 0, 0, 0.12, 0, 1, 0.12, 0, 1, 0, 0, 1, 0.12, -1, 1, 0, -1, 1, 0, 0, 1, 0.12, 0, 1, 0.12, -1, 1, 0, -1, 0, 0.12, -1, 0, 0, -1, 1, 0, -1, 1, 0.12, -1, 0, 0.12, -1, 0, 0, -1, 0, 0.12, 0, 0, 0, 0, 0, 0, -1, 0, 0.12, -1, 0, 0.12, 0)
+
+[node name="Ceiling1m" type="StaticBody3D" unique_id=1503082573]
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1518239144]
+material_override = ExtResource("1_xsgq4")
+mesh = ExtResource("2_dsfov")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=252810862]
+shape = SubResource("ConcavePolygonShape3D_pny3t")

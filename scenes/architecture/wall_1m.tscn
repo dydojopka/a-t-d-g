@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall.tres" id="1_sa8ph"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_1m.res" id="2_0vunt"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_devai"]
+data = PackedVector3Array(0, 0, 0.19999999, 1, 0, 0, 0, 0, 0, 0, 0, 0.19999999, 1, 0, 0.19999999, 1, 0, 0, 0, 2.6, 0.19999999, 1, 2.6, 0, 1, 2.6, 0.19999999, 0, 2.6, 0.19999999, 0, 2.6, 0, 1, 2.6, 0, 0, 0, 0.19999999, 1, 2.6, 0.19999999, 1, 0, 0.19999999, 0, 0, 0.19999999, 0, 2.6, 0.19999999, 1, 2.6, 0.19999999, 1, 0, 0.19999999, 1, 2.6, 0, 1, 0, 0, 1, 0, 0.19999999, 1, 2.6, 0.19999999, 1, 2.6, 0, 1, 0, 0, 0, 2.6, 0, 0, 0, 0, 1, 0, 0, 1, 2.6, 0, 0, 2.6, 0, 0, 0, 0, 0, 2.6, 0.19999999, 0, 0, 0.19999999, 0, 0, 0, 0, 2.6, 0, 0, 2.6, 0.19999999)
+
+[node name="Wall1m" type="StaticBody3D" unique_id=1433929958]
+metadata/source_module = "wall_1m"
+metadata/grid_m = 0.5
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1934750720]
+material_override = ExtResource("1_sa8ph")
+mesh = ExtResource("2_0vunt")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1967200241]
+shape = SubResource("ConcavePolygonShape3D_devai")

@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall_stained.tres" id="1_161dm"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_1m_stained.res" id="2_xjplv"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dp2ss"]
+data = PackedVector3Array(0, 0, 0.19999999, 1, 0, 0, 0, 0, 0, 0, 0, 0.19999999, 1, 0, 0.19999999, 1, 0, 0, 0, 2.6, 0.19999999, 1, 2.6, 0, 1, 2.6, 0.19999999, 0, 2.6, 0.19999999, 0, 2.6, 0, 1, 2.6, 0, 0, 0, 0.19999999, 1, 2.6, 0.19999999, 1, 0, 0.19999999, 0, 0, 0.19999999, 0, 2.6, 0.19999999, 1, 2.6, 0.19999999, 1, 0, 0.19999999, 1, 2.6, 0, 1, 0, 0, 1, 0, 0.19999999, 1, 2.6, 0.19999999, 1, 2.6, 0, 1, 0, 0, 0, 2.6, 0, 0, 0, 0, 1, 0, 0, 1, 2.6, 0, 0, 2.6, 0, 0, 0, 0, 0, 2.6, 0.19999999, 0, 0, 0.19999999, 0, 0, 0, 0, 2.6, 0, 0, 2.6, 0.19999999)
+
+[node name="Wall1mStained" type="StaticBody3D" unique_id=501110763]
+metadata/source_module = "wall_1m_stained"
+metadata/grid_m = 0.5
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=174048853]
+material_override = ExtResource("1_161dm")
+mesh = ExtResource("2_xjplv")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=425696059]
+shape = SubResource("ConcavePolygonShape3D_dp2ss")

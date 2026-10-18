@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/floor.tres" id="1_n0soj"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/floor_2m.res" id="2_wn2g5"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s0fnb"]
+data = PackedVector3Array(0, -0.16, 0, 2, -0.16, -2, 0, -0.16, -2, 0, -0.16, 0, 2, -0.16, 0, 2, -0.16, -2, 0, 0, 0, 2, 0, -2, 2, 0, 0, 0, 0, 0, 0, 0, -2, 2, 0, -2, 0, -0.16, 0, 2, 0, 0, 2, -0.16, 0, 0, -0.16, 0, 0, 0, 0, 2, 0, 0, 2, -0.16, 0, 2, 0, -2, 2, -0.16, -2, 2, -0.16, 0, 2, 0, 0, 2, 0, -2, 2, -0.16, -2, 0, 0, -2, 0, -0.16, -2, 2, -0.16, -2, 2, 0, -2, 0, 0, -2, 0, -0.16, -2, 0, 0, 0, 0, -0.16, 0, 0, -0.16, -2, 0, 0, -2, 0, 0, 0)
+
+[node name="Floor2m" type="StaticBody3D" unique_id=1149167822]
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1691710168]
+material_override = ExtResource("1_n0soj")
+mesh = ExtResource("2_wn2g5")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1171799172]
+shape = SubResource("ConcavePolygonShape3D_s0fnb")
