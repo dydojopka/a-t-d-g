@@ -1,0 +1,699 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/architecture/wall_corner_L_1m.tscn" id="1_nlfvc"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/wall_0p5m.tscn" id="2_ger7r"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/doorway_1p5m.tscn" id="3_kej4g"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/window_2m.tscn" id="4_jd0i6"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/wall_2m.tscn" id="5_ipswb"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/wall_1m.tscn" id="6_60mcd"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall.tres" id="7_qdoyo"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_0p5m.res" id="8_pgqe2"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/floor_2m.tscn" id="9_6uf85"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/floor_1m.tscn" id="10_vssto"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/floor.tres" id="11_8wewy"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/floor_1m.res" id="12_ltutq"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_2m.tscn" id="13_11vn0"]
+[ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_1m.tscn" id="14_lgda7"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/ceiling.tres" id="15_wlv7f"]
+[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/ceiling_1m.res" id="16_4w7r7"]
+[ext_resource type="PackedScene" path="res://scenes/player/first_person_player.tscn" id="17_g51i4"]
+[ext_resource type="Script" path="res://scripts/player/first_person_player.gd" id="18_0sqtc"]
+[ext_resource type="PackedScene" path="res://addons/ascii_renderer/ascii_renderer.tscn" id="19_twbfp"]
+[ext_resource type="Script" path="res://addons/ascii_renderer/ascii_renderer.gd" id="20_ufmtr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fs6gb"]
+size = Vector3(0.3, 2.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lo2gf"]
+size = Vector3(0.1, 2.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mcbyo"]
+size = Vector3(0.1, 2.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t8yfd"]
+size = Vector3(0.2, 2.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_abnhm"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wmhnw"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ka2gq"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lwuul"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iih7i"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ilt0"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ckyyt"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqrw6"]
+size = Vector3(0.5, 0.16, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sart6"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_61bug"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lpfdt"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sulo6"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kuc2m"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6j2xt"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rf203"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4uend"]
+size = Vector3(0.5, 0.12, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_623u4"]
+size = Vector3(0.9, 2.1, 0.12)
+
+[sub_resource type="Environment" id="Environment_x2fjh"]
+background_mode = 1
+background_color = Color(0.001, 0.002, 0.003, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.25, 0.31, 0.38, 1)
+ambient_light_energy = 0.1
+reflected_light_source = 1
+tonemap_mode = 2
+
+[node name="ShelterApartment" type="Node3D" unique_id=294848804]
+metadata/description_ru = "Геометрия однокомнатного убежища: комната у окна, кухня слева, санузел справа, прихожая с нишей. Мебель не установлена."
+metadata/interior_bounds_m = Vector3(4.5, 2.6, 8)
+
+[node name="Architecture" type="Node3D" parent="." unique_id=1207259472]
+
+[node name="PerimeterWalls" type="Node3D" parent="Architecture" unique_id=1735504459]
+
+[node name="CornerSW" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=3259579 instance=ExtResource("1_nlfvc")]
+metadata/source_module = "wall_corner_L_1m"
+metadata/grid_m = 0.5
+
+[node name="CornerSE" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=283707999 instance=ExtResource("1_nlfvc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, 0)
+metadata/source_module = "wall_corner_L_1m"
+metadata/grid_m = 0.5
+
+[node name="CornerNE" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=516240228 instance=ExtResource("1_nlfvc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, -8)
+metadata/source_module = "wall_corner_L_1m"
+metadata/grid_m = 0.5
+
+[node name="CornerNW" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=1400683939 instance=ExtResource("1_nlfvc")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -8)
+metadata/source_module = "wall_corner_L_1m"
+metadata/grid_m = 0.5
+
+[node name="EntranceLeft" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=635643503 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="EntranceOpening" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=72954199 instance=ExtResource("3_kej4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
+metadata/source_module = "doorway_1p5m"
+metadata/grid_m = 0.5
+
+[node name="EntranceRight" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=1831569442 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="LivingWindow" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=2099074250 instance=ExtResource("4_jd0i6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -8)
+metadata/source_module = "window_2m"
+metadata/grid_m = 0.5
+
+[node name="WindowRight" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=168216545 instance=ExtResource("2_ger7r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.5, 0, -8)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="East_1" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=910847481 instance=ExtResource("5_ipswb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -1)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="East_3" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=206856531 instance=ExtResource("5_ipswb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -3)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="East_5" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=2067047143 instance=ExtResource("5_ipswb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -5)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="West_7" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=89318121 instance=ExtResource("5_ipswb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -7)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="West_5" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=203869937 instance=ExtResource("5_ipswb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -5)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="West_3" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=665174304 instance=ExtResource("5_ipswb")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -3)
+metadata/source_module = "wall_2m"
+metadata/grid_m = 0.5
+
+[node name="Partitions" type="Node3D" parent="Architecture" unique_id=1791261462]
+
+[node name="LivingLeft" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1433929958 instance=ExtResource("6_60mcd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
+metadata/source_module = "wall_1m"
+metadata/grid_m = 0.5
+
+[node name="LivingLeftEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=349553401 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.5)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="LivingOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1028514089 instance=ExtResource("3_kej4g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.5)
+metadata/source_module = "doorway_1p5m"
+metadata/grid_m = 0.5
+
+[node name="LivingRight" type="StaticBody3D" parent="Architecture/Partitions" unique_id=622627369 instance=ExtResource("6_60mcd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.5)
+metadata/source_module = "wall_1m"
+metadata/grid_m = 0.5
+
+[node name="LivingRightEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=726035807 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.5)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="KitchenLower" type="StaticBody3D" parent="Architecture/Partitions" unique_id=426177095 instance=ExtResource("6_60mcd")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 0)
+metadata/source_module = "wall_1m"
+metadata/grid_m = 0.5
+
+[node name="KitchenOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=488504640 instance=ExtResource("3_kej4g")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -1)
+metadata/source_module = "doorway_1p5m"
+metadata/grid_m = 0.5
+
+[node name="KitchenUpper" type="StaticBody3D" parent="Architecture/Partitions" unique_id=653214598 instance=ExtResource("2_ger7r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -2.5)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="KitchenJunction" parent="Architecture/Partitions" unique_id=576853865 instance=ExtResource("2_ger7r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -3)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.3
+
+[node name="Mesh" parent="Architecture/Partitions/KitchenJunction" index="0" unique_id=72799143]
+transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("7_qdoyo")
+mesh = ExtResource("8_pgqe2")
+
+[node name="Collision" parent="Architecture/Partitions/KitchenJunction" index="1" unique_id=33831246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.3, 0.1)
+shape = SubResource("BoxShape3D_fs6gb")
+
+[node name="BathroomOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1938029057 instance=ExtResource("3_kej4g")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -3.3)
+metadata/source_module = "doorway_1p5m"
+metadata/grid_m = 0.5
+
+[node name="BathroomLower" type="StaticBody3D" parent="Architecture/Partitions" unique_id=2113670219 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -1.8)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="BathroomLowerEnd" parent="Architecture/Partitions" unique_id=493369719 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -1.3)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.1
+
+[node name="Mesh" parent="Architecture/Partitions/BathroomLowerEnd" index="0" unique_id=72799143]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("7_qdoyo")
+mesh = ExtResource("8_pgqe2")
+
+[node name="Collision" parent="Architecture/Partitions/BathroomLowerEnd" index="1" unique_id=33831246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.3, 0.1)
+shape = SubResource("BoxShape3D_lo2gf")
+
+[node name="BathroomFront" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1733551264 instance=ExtResource("6_60mcd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -1.2)
+metadata/source_module = "wall_1m"
+metadata/grid_m = 0.5
+
+[node name="BathroomFrontEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=972550677 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -1.2)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+
+[node name="BathroomFrontJunction" parent="Architecture/Partitions" unique_id=253537643 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -1.2)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.1
+
+[node name="Mesh" parent="Architecture/Partitions/BathroomFrontJunction" index="0" unique_id=72799143]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("7_qdoyo")
+mesh = ExtResource("8_pgqe2")
+
+[node name="Collision" parent="Architecture/Partitions/BathroomFrontJunction" index="1" unique_id=33831246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.3, 0.1)
+shape = SubResource("BoxShape3D_mcbyo")
+
+[node name="BathroomCornerFill" parent="Architecture/Partitions" unique_id=1858909599 instance=ExtResource("2_ger7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, -1.2)
+metadata/source_module = "wall_0p5m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.2
+
+[node name="Mesh" parent="Architecture/Partitions/BathroomCornerFill" index="0" unique_id=72799143]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("7_qdoyo")
+mesh = ExtResource("8_pgqe2")
+
+[node name="Collision" parent="Architecture/Partitions/BathroomCornerFill" index="1" unique_id=33831246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1.3, 0.1)
+shape = SubResource("BoxShape3D_t8yfd")
+
+[node name="Floor" type="Node3D" parent="Architecture" unique_id=390011825]
+
+[node name="Floor_0_0" type="StaticBody3D" parent="Architecture/Floor" unique_id=1149167822 instance=ExtResource("9_6uf85")]
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_0_2" type="StaticBody3D" parent="Architecture/Floor" unique_id=1044777373 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_0_4" type="StaticBody3D" parent="Architecture/Floor" unique_id=1015263981 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_0_6" type="StaticBody3D" parent="Architecture/Floor" unique_id=508890716 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_2_0" type="StaticBody3D" parent="Architecture/Floor" unique_id=1621235590 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_2_2" type="StaticBody3D" parent="Architecture/Floor" unique_id=1977976893 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_2_4" type="StaticBody3D" parent="Architecture/Floor" unique_id=1476742303 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="Floor_2_6" type="StaticBody3D" parent="Architecture/Floor" unique_id=1887771262 instance=ExtResource("9_6uf85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+metadata/source_module = "floor_2m"
+metadata/grid_m = 0.5
+
+[node name="FloorEdge_0" parent="Architecture/Floor" unique_id=179799343 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_0" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_0" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_abnhm")
+
+[node name="FloorEdge_1" parent="Architecture/Floor" unique_id=160756731 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_1" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_1" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_wmhnw")
+
+[node name="FloorEdge_2" parent="Architecture/Floor" unique_id=1236892803 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_2" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_2" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_ka2gq")
+
+[node name="FloorEdge_3" parent="Architecture/Floor" unique_id=4058259 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_3" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_3" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_lwuul")
+
+[node name="FloorEdge_4" parent="Architecture/Floor" unique_id=1301705048 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_4" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_4" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_iih7i")
+
+[node name="FloorEdge_5" parent="Architecture/Floor" unique_id=1945124594 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_5" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_5" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_7ilt0")
+
+[node name="FloorEdge_6" parent="Architecture/Floor" unique_id=93817159 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_6" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_6" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_ckyyt")
+
+[node name="FloorEdge_7" parent="Architecture/Floor" unique_id=1493296627 instance=ExtResource("10_vssto")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+metadata/source_module = "floor_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Floor/FloorEdge_7" index="0" unique_id=1234226745]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("11_8wewy")
+mesh = ExtResource("12_ltutq")
+
+[node name="Collision" parent="Architecture/Floor/FloorEdge_7" index="1" unique_id=1598877739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
+shape = SubResource("BoxShape3D_lqrw6")
+
+[node name="Ceiling" type="Node3D" parent="Architecture" unique_id=1279540781]
+
+[node name="Ceiling_0_0" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1484369282 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_0_2" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1552305163 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -2)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_0_4" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=2031334138 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -4)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_0_6" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1815228912 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -6)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_2_0" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1092949684 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, 0)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_2_2" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1475482941 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -2)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_2_4" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1804238337 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -4)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="Ceiling_2_6" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=631886750 instance=ExtResource("13_11vn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -6)
+metadata/source_module = "ceiling_2m"
+metadata/grid_m = 0.5
+
+[node name="CeilingEdge_0" parent="Architecture/Ceiling" unique_id=1503082573 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, 0)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_0" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_0" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_sart6")
+
+[node name="CeilingEdge_1" parent="Architecture/Ceiling" unique_id=1954686614 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -1)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_1" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_1" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_61bug")
+
+[node name="CeilingEdge_2" parent="Architecture/Ceiling" unique_id=1229024809 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -2)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_2" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_2" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_lpfdt")
+
+[node name="CeilingEdge_3" parent="Architecture/Ceiling" unique_id=561765390 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -3)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_3" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_3" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_sulo6")
+
+[node name="CeilingEdge_4" parent="Architecture/Ceiling" unique_id=425285412 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -4)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_4" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_4" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_kuc2m")
+
+[node name="CeilingEdge_5" parent="Architecture/Ceiling" unique_id=1642726671 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -5)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_5" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_5" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_6j2xt")
+
+[node name="CeilingEdge_6" parent="Architecture/Ceiling" unique_id=1257220569 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -6)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_6" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_6" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_rf203")
+
+[node name="CeilingEdge_7" parent="Architecture/Ceiling" unique_id=1958302135 instance=ExtResource("14_lgda7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -7)
+metadata/source_module = "ceiling_1m"
+metadata/grid_m = 0.5
+metadata/fitted_width_m = 0.5
+
+[node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_7" index="0" unique_id=1518239144]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("15_wlv7f")
+mesh = ExtResource("16_4w7r7")
+
+[node name="Collision" parent="Architecture/Ceiling/CeilingEdge_7" index="1" unique_id=252810862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
+shape = SubResource("BoxShape3D_4uend")
+
+[node name="RoomMarkers" type="Node3D" parent="." unique_id=2096518847]
+
+[node name="LivingRoom" type="Marker3D" parent="RoomMarkers" unique_id=1766497147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0, -5.7)
+
+[node name="Kitchen" type="Marker3D" parent="RoomMarkers" unique_id=173411346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1.7)
+
+[node name="Bathroom" type="Marker3D" parent="RoomMarkers" unique_id=1233046140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, -2.2)
+
+[node name="EntranceHall" type="Marker3D" parent="RoomMarkers" unique_id=457305825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -1.5)
+
+[node name="HallNiche" type="Marker3D" parent="RoomMarkers" unique_id=1040508157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.5)
+
+[node name="PreviewDeviceLighting" type="Node3D" parent="." unique_id=1293282081]
+metadata/description_ru = "Временная имитация света монитора и радио для осмотра геометрии; модели устройств будут добавлены отдельно."
+
+[node name="MonitorGlowPreview" type="OmniLight3D" parent="PreviewDeviceLighting" unique_id=1172722131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05, 1.1, -7.45)
+light_color = Color(0.58, 0.78, 0.64, 1)
+light_energy = 3.0
+shadow_enabled = true
+omni_range = 6.5
+omni_attenuation = 1.25
+
+[node name="RadioGlowPreview" type="OmniLight3D" parent="PreviewDeviceLighting" unique_id=1381119026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0.95, -7.4)
+light_color = Color(0.85, 0.44, 0.14, 1)
+light_energy = 0.7
+shadow_enabled = true
+omni_range = 4.0
+
+[node name="EntranceBoundary" type="StaticBody3D" parent="." unique_id=1833404841]
+metadata/description_ru = "Временная граница уровня за входным проёмом. Удалить при подключении общего коридора; это не дверь."
+
+[node name="Collision" type="CollisionShape3D" parent="EntranceBoundary" unique_id=454331930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.05, 0.27)
+shape = SubResource("BoxShape3D_623u4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=138615423]
+environment = SubResource("Environment_x2fjh")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1294470685 instance=ExtResource("17_g51i4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0.05, -4.3)
+floor_snap_length = 0.2
+script = ExtResource("18_0sqtc")
+
+[node name="AsciiRenderer" type="CanvasLayer" parent="." unique_id=1811410683 instance=ExtResource("19_twbfp")]
+layer = 10
+script = ExtResource("20_ufmtr")
+brightness = 1.65
+contrast = 0.95
+gamma = 0.85
+
+[editable path="Architecture/Partitions/KitchenJunction"]
+[editable path="Architecture/Partitions/BathroomLowerEnd"]
+[editable path="Architecture/Partitions/BathroomFrontJunction"]
+[editable path="Architecture/Partitions/BathroomCornerFill"]
+[editable path="Architecture/Floor/FloorEdge_0"]
+[editable path="Architecture/Floor/FloorEdge_1"]
+[editable path="Architecture/Floor/FloorEdge_2"]
+[editable path="Architecture/Floor/FloorEdge_3"]
+[editable path="Architecture/Floor/FloorEdge_4"]
+[editable path="Architecture/Floor/FloorEdge_5"]
+[editable path="Architecture/Floor/FloorEdge_6"]
+[editable path="Architecture/Floor/FloorEdge_7"]
+[editable path="Architecture/Ceiling/CeilingEdge_0"]
+[editable path="Architecture/Ceiling/CeilingEdge_1"]
+[editable path="Architecture/Ceiling/CeilingEdge_2"]
+[editable path="Architecture/Ceiling/CeilingEdge_3"]
+[editable path="Architecture/Ceiling/CeilingEdge_4"]
+[editable path="Architecture/Ceiling/CeilingEdge_5"]
+[editable path="Architecture/Ceiling/CeilingEdge_6"]
+[editable path="Architecture/Ceiling/CeilingEdge_7"]
