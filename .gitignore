@@ -9,6 +9,9 @@
 /dist/
 /exports/
 
+# Local development materials (not part of the game).
+/local_dev/
+
 # Local export credentials and environment settings.
 export_credentials.cfg
 .env
