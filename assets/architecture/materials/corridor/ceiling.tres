@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/architecture_surface.gdshader" id="1_geyr2"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_basecolor.png" id="2_87k2r"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_normal.png" id="3_idjik"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_roughness.png" id="4_u0p3d"]
+
+[resource]
+resource_name = "corridor_ceiling"
+render_priority = 0
+shader = ExtResource("1_geyr2")
+shader_parameter/color_texture = ExtResource("2_87k2r")
+shader_parameter/roughness_texture = ExtResource("4_u0p3d")
+shader_parameter/normal_texture = ExtResource("3_idjik")
+shader_parameter/wall_projection = false
+shader_parameter/surface_origin = Vector3(0, 0, 0)
+shader_parameter/wall_period = 16.0
+shader_parameter/wall_height = 2.6
+shader_parameter/horizontal_period = 8.0
+shader_parameter/normal_strength = 0.65
+shader_parameter/color_multiplier = Vector3(1, 1, 1)
