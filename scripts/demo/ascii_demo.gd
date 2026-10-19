@@ -6,6 +6,7 @@ extends Node3D
 const ACCENT := Color("83efd2")
 const TEXT := Color("e7eef5")
 const MUTED := Color("8d9eaf")
+const PRIMITIVE_MATERIAL: ShaderMaterial = preload("res://assets/materials/primitive_surface.tres")
 const SHAPE_COLORS: Array[Color] = [
 	Color("fa6173"), Color("ffcd67"), Color("64d6f0"),
 	Color("a38bff"), Color("71e5aa"), Color("f68acb"),
@@ -96,35 +97,37 @@ func _build_world() -> void:
 	capsule.height = 2.1
 	var meshes: Array[Mesh] = [cube, sphere, torus, cone, cylinder, capsule]
 	var names: Array[String] = ["Cube", "Sphere", "Torus", "Cone", "Cylinder", "Capsule"]
+	var pedestal := CylinderMesh.new()
+	pedestal.top_radius = 1.3
+	pedestal.bottom_radius = 1.35
+	pedestal.height = 0.24
 	for index: int in meshes.size():
 		var x := float(index % 3 - 1) * 3.6
 		var z := -2.0 if index < 3 else 2.0
-		var pedestal := CylinderMesh.new()
-		pedestal.top_radius = 1.3
-		pedestal.bottom_radius = 1.35
-		pedestal.height = 0.24
 		var base := MeshInstance3D.new()
 		base.mesh = pedestal
 		base.position = Vector3(x, 0.12, z)
-		base.material_override = _material(Color("263445"))
+		_apply_material(base, Color("263445"))
 		world.add_child(base)
 		var shape := MeshInstance3D.new()
 		shape.name = names[index]
 		shape.mesh = meshes[index]
 		shape.position = Vector3(x, 1.65, z)
-		shape.material_override = _material(SHAPE_COLORS[index])
+		_apply_material(shape, SHAPE_COLORS[index])
 		if index == 2:
 			shape.rotation_degrees.x = 68.0
 		world.add_child(shape)
 		figures.append(shape)
 
 
-func _material(color: Color) -> StandardMaterial3D:
-	var material := StandardMaterial3D.new()
-	material.albedo_color = color
-	material.roughness = 0.55
-	material.metallic = 0.08
-	return material
+func _apply_material(mesh: MeshInstance3D, color: Color) -> void:
+	mesh.material_override = PRIMITIVE_MATERIAL
+	mesh.set_instance_shader_parameter("albedo_color", color)
+	mesh.set_instance_shader_parameter("roughness", 0.55)
+	mesh.set_instance_shader_parameter("metallic", 0.08)
+	mesh.set_instance_shader_parameter("specular", 0.5)
+	mesh.set_instance_shader_parameter("emission_color", Color(0, 0, 0, 1))
+	mesh.set_instance_shader_parameter("emission_energy", 0.0)
 
 
 func _process(delta: float) -> void:
