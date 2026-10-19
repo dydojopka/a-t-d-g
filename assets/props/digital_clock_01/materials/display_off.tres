@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "Дисплей часов выключен"
+albedo_color = Color(0.008, 0.006, 0.006, 1)
+metallic_specular = 0.18
+roughness = 0.35
+texture_filter = 2
+metadata/separate_material_reason_ru = "Отдельный дисплей с UV 0–1 для будущей динамической текстуры времени. Демонстрационные 02:17 не переносятся в игру."
