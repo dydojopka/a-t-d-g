@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_bstqc"]
+[ext_resource type="Texture2D" path="res://assets/props/computer_desk_01/textures/desk_basecolor.png" id="2_epwuf"]
+[ext_resource type="Texture2D" path="res://assets/props/computer_desk_01/textures/desk_roughness.png" id="3_um8ya"]
+
+[resource]
+resource_name = "Shared opaque surface computer_desk_01"
+render_priority = 0
+shader = ExtResource("1_bstqc")
+shader_parameter/color_texture = ExtResource("2_epwuf")
+shader_parameter/roughness_texture = ExtResource("3_um8ya")
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = null
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
