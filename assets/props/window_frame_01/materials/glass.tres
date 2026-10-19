@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "GlassSurface · общее стекло окна"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.26006746, 0.30353206, 0.29128972, 0.38)
+roughness = 0.38
+metadata/separate_material_reason_ru = "Общая прозрачность двух стёкол несовместима с непрозрачной окрашенной рамой."
