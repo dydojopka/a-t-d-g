@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_q1pnt"]
+[ext_resource type="Texture2D" path="res://assets/props/compact_fridge_01/textures/compact_fridge_01_basecolor.png" id="2_ywvqw"]
+[ext_resource type="Texture2D" path="res://assets/props/compact_fridge_01/textures/compact_fridge_01_roughness.png" id="3_mdi7v"]
+
+[resource]
+resource_name = "SharedSurface · compact_fridge_01"
+render_priority = 0
+shader = ExtResource("1_q1pnt")
+shader_parameter/color_texture = ExtResource("2_ywvqw")
+shader_parameter/roughness_texture = ExtResource("3_mdi7v")
+shader_parameter/power_uses_color_texture = null
+shader_parameter/power_emission_uses_surface_color = null
+shader_parameter/power_material_level = null
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = null
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
