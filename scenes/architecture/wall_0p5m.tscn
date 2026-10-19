@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall.tres" id="1_25pqv"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="1_25pqv"]
 [ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_0p5m.res" id="2_jr8at"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pv5to"]
@@ -11,6 +11,7 @@ metadata/source_module = "wall_0p5m"
 metadata/grid_m = 0.5
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=72799143]
+instance_shader_parameters/surface_kind = 0
 material_override = ExtResource("1_25pqv")
 mesh = ExtResource("2_jr8at")
 

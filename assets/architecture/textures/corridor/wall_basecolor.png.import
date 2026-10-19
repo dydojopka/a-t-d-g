@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2tbb4830sbly"
-path.s3tc="res://.godot/imported/wall_basecolor.png-6c5bd023e9c537ae32a7b8d99027a0ae.s3tc.ctex"
+path="res://.godot/imported/wall_basecolor.png-6c5bd023e9c537ae32a7b8d99027a0ae.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/architecture/textures/corridor/wall_basecolor.png"
-dest_files=["res://.godot/imported/wall_basecolor.png-6c5bd023e9c537ae32a7b8d99027a0ae.s3tc.ctex"]
+dest_files=["res://.godot/imported/wall_basecolor.png-6c5bd023e9c537ae32a7b8d99027a0ae.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

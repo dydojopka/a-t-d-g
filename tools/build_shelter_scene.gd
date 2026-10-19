@@ -40,29 +40,22 @@ func _save_scene(node: Node, path: String) -> void:
 func _create_materials() -> void:
 	var shader: Shader = load("res://shaders/architecture_surface.gdshader")
 	for profile: String in ["shelter", "corridor"]:
+		var material := ShaderMaterial.new()
+		material.resource_name = profile + "_surfaces"
+		material.shader = shader
+		material.set_shader_parameter("surface_origin", Vector3.ZERO)
+		material.set_shader_parameter("wall_period", 16.0)
+		material.set_shader_parameter("wall_height", 2.6)
+		material.set_shader_parameter("horizontal_period", 8.0)
+		material.set_shader_parameter("wall_normal_strength", 0.35)
+		material.set_shader_parameter("horizontal_normal_strength", 0.65)
 		for surface: String in ["wall", "floor", "ceiling"]:
-			var material := ShaderMaterial.new()
-			material.resource_name = profile + "_" + surface
-			material.shader = shader
-			material.set_shader_parameter("wall_projection", surface == "wall")
-			material.set_shader_parameter("surface_origin", Vector3.ZERO)
-			material.set_shader_parameter("wall_period", 16.0)
-			material.set_shader_parameter("wall_height", 2.6)
-			material.set_shader_parameter("horizontal_period", 8.0)
-			material.set_shader_parameter("normal_strength", 0.65)
-			material.set_shader_parameter("color_multiplier", Vector3.ONE)
 			for entry: Array in [["basecolor", "color_texture"], ["roughness", "roughness_texture"], ["normal", "normal_texture"]]:
-				material.set_shader_parameter(entry[1], load(ASSETS + "textures/" + profile + "/" + surface + "_" + str(entry[0]) + ".png"))
-			var path := ASSETS + "materials/" + profile + "/" + surface + ".tres"
-			assert(ResourceSaver.save(material, path, ResourceSaver.FLAG_CHANGE_PATH) == OK)
-			material.take_over_path(path)
-			materials[profile + "_" + surface] = material
-		var damp: ShaderMaterial = materials[profile + "_wall"].duplicate()
-		damp.resource_name = profile + "_wall_stained"
-		damp.set_shader_parameter("color_multiplier", Vector3(0.9, 0.93, 0.91))
-		assert(ResourceSaver.save(damp, ASSETS + "materials/" + profile + "/wall_stained.tres", ResourceSaver.FLAG_CHANGE_PATH) == OK)
-		damp.take_over_path(ASSETS + "materials/" + profile + "/wall_stained.tres")
-		materials[profile + "_wall_stained"] = damp
+				material.set_shader_parameter(surface + "_" + str(entry[1]), load(ASSETS + "textures/" + profile + "/" + surface + "_" + str(entry[0]) + ".png"))
+		var path := ASSETS + "materials/" + profile + "/surfaces.tres"
+		assert(ResourceSaver.save(material, path, ResourceSaver.FLAG_CHANGE_PATH) == OK)
+		material.take_over_path(path)
+		materials[profile] = material
 
 
 func _find_mesh(node: Node, inherited: Transform3D = Transform3D.IDENTITY) -> Dictionary:
@@ -96,9 +89,10 @@ func _create_module(module_name: String) -> void:
 	visual.mesh = mesh
 	visual.transform = mesh_data["transform"]
 	var surface := "floor" if module_name.begins_with("floor_") else "ceiling" if module_name.begins_with("ceiling_") else "wall"
+	visual.material_override = materials["shelter"]
+	visual.set_instance_shader_parameter("surface_kind", ["wall", "floor", "ceiling"].find(surface))
 	if module_name.ends_with("stained"):
-		surface = "wall_stained"
-	visual.material_override = materials["shelter_" + surface]
+		visual.set_instance_shader_parameter("color_multiplier", Vector3(0.9, 0.93, 0.91))
 	body.add_child(visual)
 	visual.owner = body
 	var collision := CollisionShape3D.new()

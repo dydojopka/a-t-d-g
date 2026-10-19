@@ -1,0 +1,32 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/architecture_surface.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/wall_basecolor.png" id="wall_color"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/wall_roughness.png" id="wall_roughness"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/wall_normal.png" id="wall_normal"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/floor_basecolor.png" id="floor_color"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/floor_roughness.png" id="floor_roughness"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/floor_normal.png" id="floor_normal"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_basecolor.png" id="ceiling_color"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_roughness.png" id="ceiling_roughness"]
+[ext_resource type="Texture2D" path="res://assets/architecture/textures/corridor/ceiling_normal.png" id="ceiling_normal"]
+
+[resource]
+resource_name = "corridor_surfaces"
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/wall_color_texture = ExtResource("wall_color")
+shader_parameter/wall_roughness_texture = ExtResource("wall_roughness")
+shader_parameter/wall_normal_texture = ExtResource("wall_normal")
+shader_parameter/floor_color_texture = ExtResource("floor_color")
+shader_parameter/floor_roughness_texture = ExtResource("floor_roughness")
+shader_parameter/floor_normal_texture = ExtResource("floor_normal")
+shader_parameter/ceiling_color_texture = ExtResource("ceiling_color")
+shader_parameter/ceiling_roughness_texture = ExtResource("ceiling_roughness")
+shader_parameter/ceiling_normal_texture = ExtResource("ceiling_normal")
+shader_parameter/surface_origin = Vector3(0, 0, 0)
+shader_parameter/wall_period = 16.0
+shader_parameter/wall_height = 2.6
+shader_parameter/horizontal_period = 8.0
+shader_parameter/wall_normal_strength = 0.35
+shader_parameter/horizontal_normal_strength = 0.65

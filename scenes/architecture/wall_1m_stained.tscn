@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall_stained.tres" id="1_161dm"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="1_161dm"]
 [ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_1m_stained.res" id="2_xjplv"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dp2ss"]
@@ -11,6 +11,8 @@ metadata/source_module = "wall_1m_stained"
 metadata/grid_m = 0.5
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=174048853]
+instance_shader_parameters/surface_kind = 0
+instance_shader_parameters/color_multiplier = Vector3(0.9, 0.93, 0.91)
 material_override = ExtResource("1_161dm")
 mesh = ExtResource("2_xjplv")
 

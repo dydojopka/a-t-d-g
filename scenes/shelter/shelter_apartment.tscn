@@ -6,15 +6,15 @@
 [ext_resource type="PackedScene" path="res://scenes/architecture/window_2m.tscn" id="4_jd0i6"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_2m.tscn" id="5_ipswb"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_1m.tscn" id="6_60mcd"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/wall.tres" id="7_qdoyo"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="7_qdoyo"]
 [ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_0p5m.res" id="8_pgqe2"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/floor_2m.tscn" id="9_6uf85"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/floor_1m.tscn" id="10_vssto"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/floor.tres" id="11_8wewy"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="11_8wewy"]
 [ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/floor_1m.res" id="12_ltutq"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_2m.tscn" id="13_11vn0"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_1m.tscn" id="14_lgda7"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/ceiling.tres" id="15_wlv7f"]
+[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="15_wlv7f"]
 [ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/ceiling_1m.res" id="16_4w7r7"]
 [ext_resource type="PackedScene" path="res://scenes/player/first_person_player.tscn" id="17_g51i4"]
 [ext_resource type="Script" path="res://scripts/player/first_person_player.gd" id="18_0sqtc"]
@@ -226,6 +226,7 @@ metadata/fitted_width_m = 0.3
 [node name="Mesh" parent="Architecture/Partitions/KitchenJunction" index="0" unique_id=72799143]
 transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("7_qdoyo")
+instance_shader_parameters/surface_kind = 0
 mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/KitchenJunction" index="1" unique_id=33831246]
@@ -251,6 +252,7 @@ metadata/fitted_width_m = 0.1
 [node name="Mesh" parent="Architecture/Partitions/BathroomLowerEnd" index="0" unique_id=72799143]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("7_qdoyo")
+instance_shader_parameters/surface_kind = 0
 mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomLowerEnd" index="1" unique_id=33831246]
@@ -276,6 +278,7 @@ metadata/fitted_width_m = 0.1
 [node name="Mesh" parent="Architecture/Partitions/BathroomFrontJunction" index="0" unique_id=72799143]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("7_qdoyo")
+instance_shader_parameters/surface_kind = 0
 mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomFrontJunction" index="1" unique_id=33831246]
@@ -291,6 +294,7 @@ metadata/fitted_width_m = 0.2
 [node name="Mesh" parent="Architecture/Partitions/BathroomCornerFill" index="0" unique_id=72799143]
 transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("7_qdoyo")
+instance_shader_parameters/surface_kind = 0
 mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomCornerFill" index="1" unique_id=33831246]
@@ -347,6 +351,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_0" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_0" index="1" unique_id=1598877739]
@@ -362,6 +367,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_1" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_1" index="1" unique_id=1598877739]
@@ -377,6 +383,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_2" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_2" index="1" unique_id=1598877739]
@@ -392,6 +399,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_3" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_3" index="1" unique_id=1598877739]
@@ -407,6 +415,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_4" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_4" index="1" unique_id=1598877739]
@@ -422,6 +431,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_5" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_5" index="1" unique_id=1598877739]
@@ -437,6 +447,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_6" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_6" index="1" unique_id=1598877739]
@@ -452,6 +463,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_7" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("11_8wewy")
+instance_shader_parameters/surface_kind = 1
 mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_7" index="1" unique_id=1598877739]
@@ -509,6 +521,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_0" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_0" index="1" unique_id=252810862]
@@ -524,6 +537,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_1" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_1" index="1" unique_id=252810862]
@@ -539,6 +553,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_2" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_2" index="1" unique_id=252810862]
@@ -554,6 +569,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_3" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_3" index="1" unique_id=252810862]
@@ -569,6 +585,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_4" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_4" index="1" unique_id=252810862]
@@ -584,6 +601,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_5" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_5" index="1" unique_id=252810862]
@@ -599,6 +617,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_6" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_6" index="1" unique_id=252810862]
@@ -614,6 +633,7 @@ metadata/fitted_width_m = 0.5
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_7" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = ExtResource("15_wlv7f")
+instance_shader_parameters/surface_kind = 2
 mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_7" index="1" unique_id=252810862]
