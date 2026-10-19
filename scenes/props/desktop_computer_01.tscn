@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/desktop_computer_01/desktop_computer_01_shared.glb" id="1_vbx8c"]
+[ext_resource type="Material" path="res://assets/props/desktop_computer_01/materials/surface.tres" id="2_8cdd0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k0yns"]
+size = Vector3(0.54, 0.17, 0.523)
+
+[node name="DesktopComputer01" type="StaticBody3D" unique_id=1228329881]
+metadata/approved_source_version = 2
+metadata/asset_id = "desktop_computer_01"
+metadata/material_optimization = "shared opaque surface; static geometry consolidated"
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1445880369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.085, -0.0015)
+shape = SubResource("BoxShape3D_k0yns")
+
+[node name="Model" parent="." unique_id=454156536 instance=ExtResource("1_vbx8c")]
+
+[node name="CaseSurface" parent="Model/desktop_computer_01" parent_id_path=PackedInt32Array(454156536, 1734272722) index="0" unique_id=2064224147]
+material_override = ExtResource("2_8cdd0")
+
+[node name="FloppyEjectButton" parent="Model/desktop_computer_01" parent_id_path=PackedInt32Array(454156536, 1734272722) index="3" unique_id=2057681787]
+material_override = ExtResource("2_8cdd0")
+
+[node name="PowerButton" parent="Model/desktop_computer_01" parent_id_path=PackedInt32Array(454156536, 1734272722) index="6" unique_id=1682225900]
+material_override = ExtResource("2_8cdd0")
+
+[editable path="Model"]
