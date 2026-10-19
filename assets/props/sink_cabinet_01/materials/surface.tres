@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_27ru8"]
+[ext_resource type="Texture2D" path="res://assets/props/sink_cabinet_01/textures/sink_cabinet_01_basecolor.png" id="2_0ldul"]
+[ext_resource type="Texture2D" path="res://assets/props/sink_cabinet_01/textures/sink_cabinet_01_roughness.png" id="3_b243x"]
+
+[resource]
+resource_name = "SharedSurface · sink_cabinet_01"
+render_priority = 0
+shader = ExtResource("1_27ru8")
+shader_parameter/color_texture = ExtResource("2_0ldul")
+shader_parameter/roughness_texture = ExtResource("3_b243x")
+shader_parameter/power_uses_color_texture = null
+shader_parameter/power_emission_uses_surface_color = null
+shader_parameter/power_material_level = null
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = null
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
