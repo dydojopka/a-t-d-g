@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_mx78t"]
+[ext_resource type="Texture2D" path="res://assets/props/desk_chair_01/textures/chair_basecolor.png" id="2_jnd2e"]
+[ext_resource type="Texture2D" path="res://assets/props/desk_chair_01/textures/chair_roughness.png" id="3_j3kae"]
+
+[resource]
+resource_name = "Общая поверхность офисного стула"
+render_priority = 0
+shader = ExtResource("1_mx78t")
+shader_parameter/color_texture = ExtResource("2_jnd2e")
+shader_parameter/roughness_texture = ExtResource("3_j3kae")
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = null
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
