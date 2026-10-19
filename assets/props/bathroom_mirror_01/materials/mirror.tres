@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "MirrorSurface · отдельное полотно"
+cull_mode = 2
+albedo_color = Color(0.77970624, 0.80946815, 0.7977378, 1)
+metallic = 1.0
+roughness = 0.075
+metadata/separate_material_reason_ru = "Независимая поверхность с UV 0–1 для будущей текстуры настоящего отражения. В Blender назначен отражающий материал; игровое отражение не реализовано."
