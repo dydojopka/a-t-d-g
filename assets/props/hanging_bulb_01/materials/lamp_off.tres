@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_f6cim"]
+[ext_resource type="Texture2D" path="res://assets/props/hanging_bulb_01/textures/hanging_bulb_01_basecolor.png" id="2_3d50y"]
+[ext_resource type="Texture2D" path="res://assets/props/hanging_bulb_01/textures/hanging_bulb_01_roughness.png" id="3_b8w6o"]
+
+[resource]
+resource_name = "LampOff · выключенная лампочка"
+render_priority = 0
+shader = ExtResource("1_f6cim")
+shader_parameter/color_texture = ExtResource("2_3d50y")
+shader_parameter/roughness_texture = ExtResource("3_b8w6o")
+shader_parameter/power_uses_color_texture = true
+shader_parameter/power_emission_uses_surface_color = false
+shader_parameter/power_material_level = 0.0
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = Color(1, 0.62, 0.28, 1)
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
