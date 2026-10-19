@@ -1,0 +1,115 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/radio_transceiver_01/radio_transceiver_01_shared.glb" id="1_qiprg"]
+[ext_resource type="Material" path="res://assets/props/radio_transceiver_01/materials/surface.tres" id="2_o0btm"]
+[ext_resource type="Script" path="res://scripts/props/radio_illumination.gd" id="3_illumination"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upx3h"]
+size = Vector3(0.3, 0.217, 0.18)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xehlr"]
+size = Vector3(0.033, 0.015, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a47ka"]
+size = Vector3(0.033, 0.015, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pt1qh"]
+size = Vector3(0.033, 0.015, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6yfx8"]
+size = Vector3(0.033, 0.015, 0.03)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3n2b"]
+size = Vector3(0.056, 0.056, 0.024)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5f6e"]
+size = Vector3(0.032, 0.032, 0.018)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbg6c"]
+size = Vector3(0.014, 0.023, 0.012)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gairc"]
+size = Vector3(0.014, 0.014, 0.019)
+
+[node name="RadioTransceiver01" type="StaticBody3D" unique_id=1404203440]
+script = ExtResource("3_illumination")
+metadata/asset_id = "radio_transceiver_01"
+metadata/approved_source_version = 3
+metadata/description_ru = "Одобренное радио. Регуляторы и стрелка независимы; игровая логика не добавлена. Подсветка выключена."
+
+[node name="Model" parent="." unique_id=828090895 instance=ExtResource("1_qiprg")]
+
+[node name="CabinetSurface" parent="Model/radio_transceiver_01" parent_id_path=PackedInt32Array(828090895, 1747383248) index="1" unique_id=381628111]
+material_override = ExtResource("2_o0btm")
+
+[node name="PowerSwitch" parent="Model/radio_transceiver_01" parent_id_path=PackedInt32Array(828090895, 1747383248) index="3" unique_id=389841393]
+material_override = ExtResource("2_o0btm")
+
+[node name="TuningKnob" parent="Model/radio_transceiver_01" parent_id_path=PackedInt32Array(828090895, 1747383248) index="5" unique_id=372881012]
+material_override = ExtResource("2_o0btm")
+metadata/rotation_axis_local = Vector3(0, 0, 1)
+
+[node name="TuningNeedle" parent="Model/radio_transceiver_01" parent_id_path=PackedInt32Array(828090895, 1747383248) index="6" unique_id=1805627057]
+material_override = ExtResource("2_o0btm")
+metadata/translation_axis_local = Vector3(1, 0, 0)
+metadata/scale_0_to_10_x_m = Vector2(-0.121, 0.079)
+
+[node name="VolumeKnob" parent="Model/radio_transceiver_01" parent_id_path=PackedInt32Array(828090895, 1747383248) index="8" unique_id=1946212804]
+material_override = ExtResource("2_o0btm")
+metadata/rotation_axis_local = Vector3(0, 0, 1)
+
+[node name="CabinetCollision" type="CollisionShape3D" parent="." unique_id=418442930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1225, 0.002)
+shape = SubResource("BoxShape3D_upx3h")
+
+[node name="Foot_-0_112_-0_058" type="CollisionShape3D" parent="." unique_id=874400487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112, 0.0075, -0.058)
+shape = SubResource("BoxShape3D_xehlr")
+
+[node name="Foot_-0_112_0_058" type="CollisionShape3D" parent="." unique_id=839086123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112, 0.0075, 0.058)
+shape = SubResource("BoxShape3D_a47ka")
+
+[node name="Foot_0_112_-0_058" type="CollisionShape3D" parent="." unique_id=1519319725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112, 0.0075, -0.058)
+shape = SubResource("BoxShape3D_pt1qh")
+
+[node name="Foot_0_112_0_058" type="CollisionShape3D" parent="." unique_id=1500925290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112, 0.0075, 0.058)
+shape = SubResource("BoxShape3D_6yfx8")
+
+[node name="TuningKnobCollision" type="CollisionShape3D" parent="." unique_id=1158336907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085, 0.105, 0.104)
+shape = SubResource("BoxShape3D_h3n2b")
+
+[node name="VolumeKnobCollision" type="CollisionShape3D" parent="." unique_id=413329737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085, 0.047, 0.101)
+shape = SubResource("BoxShape3D_h5f6e")
+
+[node name="PowerSwitchCollision" type="CollisionShape3D" parent="." unique_id=729558792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 0.037, 0.096)
+shape = SubResource("BoxShape3D_kbg6c")
+
+[node name="AntennaSocketCollision" type="CollisionShape3D" parent="." unique_id=730040206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.101, 0.166, -0.096)
+shape = SubResource("BoxShape3D_gairc")
+
+[node name="ScaleLight" type="SpotLight3D" parent="."]
+visible = false
+position = Vector3(0, 0.191, 0.101)
+rotation = Vector3(0, 3.141592654, 0)
+light_color = Color(1, 0.57, 0.25, 1)
+light_energy = 0.02
+light_specular = 0.3
+light_size = 0.025
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.015
+shadow_normal_bias = 0.1
+spot_range = 0.75
+spot_attenuation = 2.0
+spot_angle = 78.0
+spot_angle_attenuation = 1.0
+metadata/description_ru = "Слабый тёплый отсвет подсветки шкалы, направлен вперёд. Дальность 75 см; затухание по квадрату расстояния. Включать через illumination_enabled корня."
+
+[editable path="Model"]

@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_ypk3q"]
+[ext_resource type="Texture2D" path="res://assets/props/radio_transceiver_01/textures/radio_basecolor.png" id="2_cwh31"]
+[ext_resource type="Texture2D" path="res://assets/props/radio_transceiver_01/textures/radio_roughness.png" id="3_qehrr"]
+
+[resource]
+resource_name = "Общая поверхность радиопередатчика с печатной шкалой"
+render_priority = 0
+shader = ExtResource("1_ypk3q")
+shader_parameter/color_texture = ExtResource("2_cwh31")
+shader_parameter/roughness_texture = ExtResource("3_qehrr")
+shader_parameter/power_uses_color_texture = true
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = Color(1, 1, 1, 1)
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
