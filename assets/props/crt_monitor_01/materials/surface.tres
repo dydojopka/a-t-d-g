@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_3dse6"]
+[ext_resource type="Texture2D" path="res://assets/props/crt_monitor_01/textures/crt_body_basecolor.png" id="2_7qnud"]
+[ext_resource type="Texture2D" path="res://assets/props/crt_monitor_01/textures/crt_body_roughness.png" id="3_7do5g"]
+
+[resource]
+resource_name = "Shared opaque surface crt_monitor_01"
+render_priority = 0
+shader = ExtResource("1_3dse6")
+shader_parameter/color_texture = ExtResource("2_7qnud")
+shader_parameter/roughness_texture = ExtResource("3_7do5g")
+shader_parameter/dark_color = Color(0, 0, 0, 1)
+shader_parameter/power_color = Color(0.025, 0.2, 0.075, 1)
+shader_parameter/status_color = Color(0.06, 0.033, 0.005, 1)
+shader_parameter/aux_color = null
+shader_parameter/power_emission = Color(0.06, 0.7, 0.22, 1)
+shader_parameter/status_emission = Color(1, 1, 1, 1)
+shader_parameter/aux_emission = null

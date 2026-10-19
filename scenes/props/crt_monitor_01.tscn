@@ -1,0 +1,55 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/crt_monitor_01/crt_monitor_01_shared.glb" id="1_gpj5j"]
+[ext_resource type="Material" path="res://assets/props/crt_monitor_01/materials/surface.tres" id="2_f0g8e"]
+[ext_resource type="Material" path="res://assets/props/crt_monitor_01/materials/screen_off.tres" id="4_ddcmq"]
+[ext_resource type="Script" path="res://scripts/props/crt_monitor_illumination.gd" id="5_illumination"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgjqp"]
+size = Vector3(0.5, 0.36, 0.5)
+
+[node name="CRTMonitor01" type="StaticBody3D" unique_id=383421838]
+script = ExtResource("5_illumination")
+metadata/asset_id = "crt_monitor_01"
+metadata/approved_source_version = 3
+metadata/material_optimization = "shared opaque surface; static geometry consolidated"
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=703319361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18, 0)
+shape = SubResource("BoxShape3D_dgjqp")
+
+[node name="Model" parent="." unique_id=2067536779 instance=ExtResource("1_gpj5j")]
+
+[node name="BrightnessControl" parent="Model/crt_monitor_01" parent_id_path=PackedInt32Array(2067536779, 117751854) index="0" unique_id=517493472]
+material_override = ExtResource("2_f0g8e")
+
+[node name="CaseSurface" parent="Model/crt_monitor_01" parent_id_path=PackedInt32Array(2067536779, 117751854) index="1" unique_id=2103311199]
+material_override = ExtResource("2_f0g8e")
+
+[node name="ContrastControl" parent="Model/crt_monitor_01" parent_id_path=PackedInt32Array(2067536779, 117751854) index="2" unique_id=751930847]
+material_override = ExtResource("2_f0g8e")
+
+[node name="PowerButton" parent="Model/crt_monitor_01" parent_id_path=PackedInt32Array(2067536779, 117751854) index="3" unique_id=971551110]
+material_override = ExtResource("2_f0g8e")
+
+[node name="ScreenSurface" parent="Model/crt_monitor_01" parent_id_path=PackedInt32Array(2067536779, 117751854) index="6" unique_id=2086450961]
+material_override = ExtResource("4_ddcmq")
+
+[node name="ScreenLight" type="AreaLight3D" parent="."]
+visible = false
+position = Vector3(0, 0.195, 0.242)
+rotation = Vector3(0, 3.141592654, 0)
+light_color = Color(0.65, 0.84, 0.72, 1)
+light_energy = 0.8
+light_specular = 0.35
+light_size = 0.12
+light_bake_mode = 0
+shadow_enabled = true
+shadow_bias = 0.02
+shadow_normal_bias = 0.1
+area_size = Vector2(0.35, 0.2625)
+area_range = 3.5
+area_attenuation = 2.0
+metadata/description_ru = "Свет от площади экрана 35 × 26,25 см, направлен вперёд. Энергия подобрана для текущей экспозиции; это не люмены. Включать через illumination_enabled корня."
+
+[editable path="Model"]

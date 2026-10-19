@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "CRT screen off"
+albedo_color = Color(0.002, 0.006, 0.004, 1)
+metallic_specular = 0.42
+roughness = 0.23
+texture_filter = 2
+metadata/material_exception = "Отдельный экран с UV 0–1: будущая динамическая текстура терминала заменяет только экран, независимо от корпуса и индикаторов."
