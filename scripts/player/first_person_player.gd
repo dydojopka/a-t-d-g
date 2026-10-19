@@ -13,7 +13,7 @@ signal mouse_capture_changed(captured: bool)
 
 @export_group("Взгляд")
 @export_range(0.01, 1.0, 0.01) var mouse_sensitivity: float = 0.12
-@export_range(45.0, 110.0, 1.0) var field_of_view: float = 75.0
+@export_range(45.0, 110.0, 1.0) var field_of_view: float = 60.0
 
 @export_group("Стойка")
 @export_range(0.1, 1.0, 0.01) var body_radius: float = 0.3
