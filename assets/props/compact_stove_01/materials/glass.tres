@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "OvenGlass · общее стекло дверцы"
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.2347951, 0.27619392, 0.26711738, 0.46)
+metallic_specular = 0.42
+roughness = 0.22
+metadata/separate_material_reason_ru = "Настоящее полупрозрачное стекло с толщиной 6 мм; состояние рендера несовместимо с непрозрачным корпусом."
