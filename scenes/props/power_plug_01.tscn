@@ -1,0 +1,69 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/power_plug_01/power_plug_01.glb" id="1_72tov"]
+[ext_resource type="Material" path="res://assets/props/power_plug_01/materials/surface.tres" id="2_jihgx"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gs1hp"]
+margin = 0.0001
+points = PackedVector3Array(-0.014, -0.007, 0, 0.014, -0.007, 0, 0.016, -0.005, 0, 0.016, 0.005, 0, 0.014, 0.007, 0, -0.014, 0.007, 0, -0.016, 0.005, 0, -0.016, -0.005, 0, -0.015, -0.008, -0.006, 0.015, -0.008, -0.006, 0.018, -0.005, -0.006, 0.018, 0.005, -0.006, 0.015, 0.008, -0.006, -0.015, 0.008, -0.006, -0.018, 0.005, -0.006, -0.018, -0.005, -0.006, -0.01, -0.008, -0.035, 0.01, -0.008, -0.035, 0.013, -0.005, -0.035, 0.013, 0.005, -0.035, 0.01, 0.008, -0.035, -0.01, 0.008, -0.035, -0.013, 0.005, -0.035, -0.013, -0.005, -0.035, -0.008, -0.007, -0.041, 0.008, -0.007, -0.041, 0.011, -0.004, -0.041, 0.011, 0.004, -0.041, 0.008, 0.007, -0.041, -0.008, 0.007, -0.041, -0.011, 0.004, -0.041, -0.011, -0.004, -0.041)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4r264"]
+margin = 0.0001
+points = PackedVector3Array(-0.0075, 0, 0.018, -0.00808579, 0.00141421, 0.018, -0.0095, 0.002, 0.018, -0.01091421, 0.00141421, 0.018, -0.0115, 0, 0.018, -0.01091421, -0.00141421, 0.018, -0.0095, -0.002, 0.018, -0.00808579, -0.00141421, 0.018, -0.0075, 0, 0.003, -0.00808579, 0.00141421, 0.003, -0.0095, 0.002, 0.003, -0.01091421, 0.00141421, 0.003, -0.0115, 0, 0.003, -0.01091421, -0.00141421, 0.003, -0.0095, -0.002, 0.003, -0.00808579, -0.00141421, 0.003)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y4i06"]
+margin = 0.0001
+points = PackedVector3Array(-0.0071, 0, 0.005, -0.00780294, 0.00169706, 0.005, -0.0095, 0.0024, 0.005, -0.01119706, 0.00169706, 0.005, -0.0119, 0, 0.005, -0.01119706, -0.00169706, 0.005, -0.0095, -0.0024, 0.005, -0.00780294, -0.00169706, 0.005, -0.0071, 0, 0, -0.00780294, 0.00169706, 0, -0.0095, 0.0024, 0, -0.01119706, 0.00169706, 0, -0.0119, 0, 0, -0.01119706, -0.00169706, 0, -0.0095, -0.0024, 0, -0.00780294, -0.00169706, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ou05j"]
+margin = 0.0001
+points = PackedVector3Array(0.0115, 0, 0.018, 0.01091421, 0.00141421, 0.018, 0.0095, 0.002, 0.018, 0.00808579, 0.00141421, 0.018, 0.0075, 0, 0.018, 0.00808579, -0.00141421, 0.018, 0.0095, -0.002, 0.018, 0.01091421, -0.00141421, 0.018, 0.0115, 0, 0.003, 0.01091421, 0.00141421, 0.003, 0.0095, 0.002, 0.003, 0.00808579, 0.00141421, 0.003, 0.0075, 0, 0.003, 0.00808579, -0.00141421, 0.003, 0.0095, -0.002, 0.003, 0.01091421, -0.00141421, 0.003)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p05xk"]
+margin = 0.0001
+points = PackedVector3Array(0.0119, 0, 0.005, 0.01119706, 0.00169706, 0.005, 0.0095, 0.0024, 0.005, 0.00780294, 0.00169706, 0.005, 0.0071, 0, 0.005, 0.00780294, -0.00169706, 0.005, 0.0095, -0.0024, 0.005, 0.01119706, -0.00169706, 0.005, 0.0119, 0, 0, 0.01119706, 0.00169706, 0, 0.0095, 0.0024, 0, 0.00780294, 0.00169706, 0, 0.0071, 0, 0, 0.00780294, -0.00169706, 0, 0.0095, -0.0024, 0, 0.01119706, -0.00169706, 0)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jvclj"]
+margin = 0.0001
+points = PackedVector3Array(0.0055, 0, -0.041, 0.00388909, 0.00388909, -0.041, 0, 0.0055, -0.041, -0.00388909, 0.00388909, -0.041, -0.0055, 0, -0.041, -0.00388909, -0.00388909, -0.041, 0, -0.0055, -0.041, 0.00388909, -0.00388909, -0.041, 0.0055, 0, -0.061, 0.00388909, 0.00388909, -0.061, 0, 0.0055, -0.061, -0.00388909, 0.00388909, -0.061, -0.0055, 0, -0.061, -0.00388909, -0.00388909, -0.061, 0, -0.0055, -0.061, 0.00388909, -0.00388909, -0.061)
+
+[node name="PowerPlug01" type="Node3D" unique_id=2020398688]
+metadata/asset_id = "power_plug_01"
+metadata/approved_source_version = 1
+metadata/import_source_sha256 = "b34b0c05d4af4912ee37ead38584101ee3de081a9a4d96f34e4dfc6d64765104"
+metadata/description_ru = "Отдельная сетевая вилка. Одобренная модель; игровые механики не реализованы."
+metadata/cable_diameter_m = 0.01
+metadata/physics_implemented = false
+metadata/insertion_axis_asset = Vector3(0, 0, 1)
+
+[node name="Model" parent="." unique_id=1961806958 instance=ExtResource("1_72tov")]
+
+[node name="BodySurface" parent="Model/power_plug_01" parent_id_path=PackedInt32Array(1961806958, 1230580174) index="0" unique_id=1071290999]
+material_override = ExtResource("2_jihgx")
+metadata/part_id = "BodySurface"
+
+[node name="CollisionBody" type="StaticBody3D" parent="Model/power_plug_01/BodySurface" index="0" unique_id=1934967652]
+
+[node name="PlugHousing" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=1325210608]
+shape = SubResource("ConvexPolygonShape3D_gs1hp")
+
+[node name="Pin_Left" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=496991167]
+shape = SubResource("ConvexPolygonShape3D_4r264")
+
+[node name="PinInsulation_Left" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=335903158]
+shape = SubResource("ConvexPolygonShape3D_y4i06")
+
+[node name="Pin_Right" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=901326274]
+shape = SubResource("ConvexPolygonShape3D_ou05j")
+
+[node name="PinInsulation_Right" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=1865636458]
+shape = SubResource("ConvexPolygonShape3D_p05xk")
+
+[node name="CableStrainRelief" type="CollisionShape3D" parent="Model/power_plug_01/BodySurface/CollisionBody" unique_id=1953387010]
+shape = SubResource("ConvexPolygonShape3D_jvclj")
+
+[node name="CableAttachment" parent="Model/power_plug_01" parent_id_path=PackedInt32Array(1961806958, 1230580174) index="1" unique_id=77825629]
+metadata/cable_axis_asset = Vector3(0, 0, -1)
+metadata/cable_diameter_m = 0.01
+
+[editable path="Model"]
