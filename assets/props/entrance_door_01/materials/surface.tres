@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_cfomb"]
+[ext_resource type="Texture2D" path="res://assets/props/entrance_door_01/textures/door_basecolor.png" id="2_245bp"]
+[ext_resource type="Texture2D" path="res://assets/props/entrance_door_01/textures/door_roughness.png" id="3_tf7eo"]
+
+[resource]
+resource_name = "SharedSurface · entrance_door_01"
+render_priority = 0
+shader = ExtResource("1_cfomb")
+shader_parameter/color_texture = ExtResource("2_245bp")
+shader_parameter/roughness_texture = ExtResource("3_tf7eo")
+shader_parameter/power_uses_color_texture = null
+shader_parameter/power_emission_uses_surface_color = null
+shader_parameter/power_material_level = null
+shader_parameter/dark_color = null
+shader_parameter/power_color = null
+shader_parameter/status_color = null
+shader_parameter/aux_color = null
+shader_parameter/power_emission = null
+shader_parameter/status_emission = null
+shader_parameter/aux_emission = null
