@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://q3cfgsodttit"]
 
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_corner_L_1m.tscn" id="1_nlfvc"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_0p5m.tscn" id="2_ger7r"]
@@ -6,20 +6,40 @@
 [ext_resource type="PackedScene" path="res://scenes/architecture/window_2m.tscn" id="4_jd0i6"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_2m.tscn" id="5_ipswb"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/wall_1m.tscn" id="6_60mcd"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="7_qdoyo"]
-[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/wall_0p5m.res" id="8_pgqe2"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/floor_2m.tscn" id="9_6uf85"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/floor_1m.tscn" id="10_vssto"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="11_8wewy"]
-[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/floor_1m.res" id="12_ltutq"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_2m.tscn" id="13_11vn0"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_1m.tscn" id="14_lgda7"]
-[ext_resource type="Material" path="res://assets/architecture/materials/shelter/surfaces.tres" id="15_wlv7f"]
-[ext_resource type="ArrayMesh" path="res://assets/architecture/meshes/ceiling_1m.res" id="16_4w7r7"]
 [ext_resource type="PackedScene" path="res://scenes/player/first_person_player.tscn" id="17_g51i4"]
-[ext_resource type="Script" path="res://scripts/player/first_person_player.gd" id="18_0sqtc"]
 [ext_resource type="PackedScene" path="res://addons/ascii_renderer/ascii_renderer.tscn" id="19_twbfp"]
-[ext_resource type="Script" path="res://addons/ascii_renderer/ascii_renderer.gd" id="20_ufmtr"]
+[ext_resource type="PackedScene" path="res://scenes/props/bathroom_mirror_01.tscn" id="prop_bathroom_mirror_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/bathroom_sink_01.tscn" id="prop_bathroom_sink_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/bathtub_01.tscn" id="prop_bathtub_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/compact_fridge_01.tscn" id="prop_compact_fridge_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/compact_stove_01.tscn" id="prop_compact_stove_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/computer_desk_01.tscn" id="prop_computer_desk_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/cooking_pot_01.tscn" id="prop_cooking_pot_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/crt_monitor_01.tscn" id="prop_crt_monitor_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/desktop_computer_01.tscn" id="prop_desktop_computer_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/desk_chair_01.tscn" id="prop_desk_chair_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/digital_clock_01.tscn" id="prop_digital_clock_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/entrance_door_01.tscn" id="prop_entrance_door_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/hanging_bulb_01.tscn" id="prop_hanging_bulb_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/interior_door_01.tscn" id="prop_interior_door_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/keyboard_01.tscn" id="prop_keyboard_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/kitchen_counter_01.tscn" id="prop_kitchen_counter_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/kitchen_shelf_01.tscn" id="prop_kitchen_shelf_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/low_shelf_01.tscn" id="prop_low_shelf_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/mug_01.tscn" id="prop_mug_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/power_plug_01.tscn" id="prop_power_plug_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/power_strip_01.tscn" id="prop_power_strip_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/radiator_01.tscn" id="prop_radiator_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/radio_transceiver_01.tscn" id="prop_radio_transceiver_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/single_bed_01.tscn" id="prop_single_bed_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/sink_cabinet_01.tscn" id="prop_sink_cabinet_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/toilet_01.tscn" id="prop_toilet_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/wall_hooks_01.tscn" id="prop_wall_hooks_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/window_frame_01.tscn" id="prop_window_frame_01"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fs6gb"]
 size = Vector3(0.3, 2.6, 0.2)
@@ -94,192 +114,123 @@ reflected_light_source = 1
 tonemap_mode = 2
 
 [node name="ShelterApartment" type="Node3D" unique_id=294848804]
-metadata/description_ru = "Геометрия однокомнатного убежища: комната у окна, кухня слева, санузел справа, прихожая с нишей. Мебель не установлена."
+metadata/description_ru = "Первая расстановка импортированных моделей: компьютер у окна, кровать слева, кухня и санузел. Статичные предметы; взаимодействия не реализованы."
 metadata/interior_bounds_m = Vector3(4.5, 2.6, 8)
 
 [node name="Architecture" type="Node3D" parent="." unique_id=1207259472]
 
 [node name="PerimeterWalls" type="Node3D" parent="Architecture" unique_id=1735504459]
 
-[node name="CornerSW" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=3259579 instance=ExtResource("1_nlfvc")]
-metadata/source_module = "wall_corner_L_1m"
-metadata/grid_m = 0.5
+[node name="CornerSW" parent="Architecture/PerimeterWalls" unique_id=3259579 instance=ExtResource("1_nlfvc")]
 
-[node name="CornerSE" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=283707999 instance=ExtResource("1_nlfvc")]
+[node name="CornerSE" parent="Architecture/PerimeterWalls" unique_id=283707999 instance=ExtResource("1_nlfvc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, 0)
-metadata/source_module = "wall_corner_L_1m"
-metadata/grid_m = 0.5
 
-[node name="CornerNE" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=516240228 instance=ExtResource("1_nlfvc")]
+[node name="CornerNE" parent="Architecture/PerimeterWalls" unique_id=516240228 instance=ExtResource("1_nlfvc")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.5, 0, -8)
-metadata/source_module = "wall_corner_L_1m"
-metadata/grid_m = 0.5
 
-[node name="CornerNW" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=1400683939 instance=ExtResource("1_nlfvc")]
+[node name="CornerNW" parent="Architecture/PerimeterWalls" unique_id=1400683939 instance=ExtResource("1_nlfvc")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -8)
-metadata/source_module = "wall_corner_L_1m"
-metadata/grid_m = 0.5
 
-[node name="EntranceLeft" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=635643503 instance=ExtResource("2_ger7r")]
+[node name="EntranceLeft" parent="Architecture/PerimeterWalls" unique_id=635643503 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
-[node name="EntranceOpening" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=72954199 instance=ExtResource("3_kej4g")]
+[node name="EntranceOpening" parent="Architecture/PerimeterWalls" unique_id=72954199 instance=ExtResource("3_kej4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
-metadata/source_module = "doorway_1p5m"
-metadata/grid_m = 0.5
 
-[node name="EntranceRight" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=1831569442 instance=ExtResource("2_ger7r")]
+[node name="EntranceRight" parent="Architecture/PerimeterWalls" unique_id=1831569442 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
-[node name="LivingWindow" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=2099074250 instance=ExtResource("4_jd0i6")]
+[node name="LivingWindow" parent="Architecture/PerimeterWalls" unique_id=2099074250 instance=ExtResource("4_jd0i6")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3, 0, -8)
-metadata/source_module = "window_2m"
-metadata/grid_m = 0.5
 
-[node name="WindowRight" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=168216545 instance=ExtResource("2_ger7r")]
+[node name="WindowRight" parent="Architecture/PerimeterWalls" unique_id=168216545 instance=ExtResource("2_ger7r")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.5, 0, -8)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
-[node name="East_1" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=910847481 instance=ExtResource("5_ipswb")]
+[node name="East_1" parent="Architecture/PerimeterWalls" unique_id=910847481 instance=ExtResource("5_ipswb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -1)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
-[node name="East_3" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=206856531 instance=ExtResource("5_ipswb")]
+[node name="East_3" parent="Architecture/PerimeterWalls" unique_id=206856531 instance=ExtResource("5_ipswb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -3)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
-[node name="East_5" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=2067047143 instance=ExtResource("5_ipswb")]
+[node name="East_5" parent="Architecture/PerimeterWalls" unique_id=2067047143 instance=ExtResource("5_ipswb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.5, 0, -5)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
-[node name="West_7" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=89318121 instance=ExtResource("5_ipswb")]
+[node name="West_7" parent="Architecture/PerimeterWalls" unique_id=89318121 instance=ExtResource("5_ipswb")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -7)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
-[node name="West_5" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=203869937 instance=ExtResource("5_ipswb")]
+[node name="West_5" parent="Architecture/PerimeterWalls" unique_id=203869937 instance=ExtResource("5_ipswb")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -5)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
-[node name="West_3" type="StaticBody3D" parent="Architecture/PerimeterWalls" unique_id=665174304 instance=ExtResource("5_ipswb")]
+[node name="West_3" parent="Architecture/PerimeterWalls" unique_id=665174304 instance=ExtResource("5_ipswb")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0, 0, -3)
-metadata/source_module = "wall_2m"
-metadata/grid_m = 0.5
 
 [node name="Partitions" type="Node3D" parent="Architecture" unique_id=1791261462]
 
-[node name="LivingLeft" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1433929958 instance=ExtResource("6_60mcd")]
+[node name="LivingLeft" parent="Architecture/Partitions" unique_id=1433929958 instance=ExtResource("6_60mcd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
-metadata/source_module = "wall_1m"
-metadata/grid_m = 0.5
 
-[node name="LivingLeftEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=349553401 instance=ExtResource("2_ger7r")]
+[node name="LivingLeftEnd" parent="Architecture/Partitions" unique_id=349553401 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3.5)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
-[node name="LivingOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1028514089 instance=ExtResource("3_kej4g")]
+[node name="LivingOpening" parent="Architecture/Partitions" unique_id=1028514089 instance=ExtResource("3_kej4g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.5)
-metadata/source_module = "doorway_1p5m"
-metadata/grid_m = 0.5
 
-[node name="LivingRight" type="StaticBody3D" parent="Architecture/Partitions" unique_id=622627369 instance=ExtResource("6_60mcd")]
+[node name="LivingRight" parent="Architecture/Partitions" unique_id=622627369 instance=ExtResource("6_60mcd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.5)
-metadata/source_module = "wall_1m"
-metadata/grid_m = 0.5
 
-[node name="LivingRightEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=726035807 instance=ExtResource("2_ger7r")]
+[node name="LivingRightEnd" parent="Architecture/Partitions" unique_id=726035807 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3.5)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
-[node name="KitchenLower" type="StaticBody3D" parent="Architecture/Partitions" unique_id=426177095 instance=ExtResource("6_60mcd")]
+[node name="KitchenLower" parent="Architecture/Partitions" unique_id=426177095 instance=ExtResource("6_60mcd")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, 0)
-metadata/source_module = "wall_1m"
-metadata/grid_m = 0.5
 
-[node name="KitchenOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=488504640 instance=ExtResource("3_kej4g")]
+[node name="KitchenOpening" parent="Architecture/Partitions" unique_id=488504640 instance=ExtResource("3_kej4g")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -1)
-metadata/source_module = "doorway_1p5m"
-metadata/grid_m = 0.5
 
-[node name="KitchenUpper" type="StaticBody3D" parent="Architecture/Partitions" unique_id=653214598 instance=ExtResource("2_ger7r")]
+[node name="KitchenUpper" parent="Architecture/Partitions" unique_id=653214598 instance=ExtResource("2_ger7r")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -2.5)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
 [node name="KitchenJunction" parent="Architecture/Partitions" unique_id=576853865 instance=ExtResource("2_ger7r")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.5, 0, -3)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.3
 
 [node name="Mesh" parent="Architecture/Partitions/KitchenJunction" index="0" unique_id=72799143]
 transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("7_qdoyo")
-instance_shader_parameters/surface_kind = 0
-mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/KitchenJunction" index="1" unique_id=33831246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.3, 0.1)
 shape = SubResource("BoxShape3D_fs6gb")
 
-[node name="BathroomOpening" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1938029057 instance=ExtResource("3_kej4g")]
+[node name="BathroomOpening" parent="Architecture/Partitions" unique_id=1938029057 instance=ExtResource("3_kej4g")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -3.3)
-metadata/source_module = "doorway_1p5m"
-metadata/grid_m = 0.5
 
-[node name="BathroomLower" type="StaticBody3D" parent="Architecture/Partitions" unique_id=2113670219 instance=ExtResource("2_ger7r")]
+[node name="BathroomLower" parent="Architecture/Partitions" unique_id=2113670219 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -1.8)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
 [node name="BathroomLowerEnd" parent="Architecture/Partitions" unique_id=493369719 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.9, 0, -1.3)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.1
 
 [node name="Mesh" parent="Architecture/Partitions/BathroomLowerEnd" index="0" unique_id=72799143]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("7_qdoyo")
-instance_shader_parameters/surface_kind = 0
-mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomLowerEnd" index="1" unique_id=33831246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.3, 0.1)
 shape = SubResource("BoxShape3D_lo2gf")
 
-[node name="BathroomFront" type="StaticBody3D" parent="Architecture/Partitions" unique_id=1733551264 instance=ExtResource("6_60mcd")]
+[node name="BathroomFront" parent="Architecture/Partitions" unique_id=1733551264 instance=ExtResource("6_60mcd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9, 0, -1.2)
-metadata/source_module = "wall_1m"
-metadata/grid_m = 0.5
 
-[node name="BathroomFrontEnd" type="StaticBody3D" parent="Architecture/Partitions" unique_id=972550677 instance=ExtResource("2_ger7r")]
+[node name="BathroomFrontEnd" parent="Architecture/Partitions" unique_id=972550677 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, -1.2)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 
 [node name="BathroomFrontJunction" parent="Architecture/Partitions" unique_id=253537643 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -1.2)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.1
 
 [node name="Mesh" parent="Architecture/Partitions/BathroomFrontJunction" index="0" unique_id=72799143]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("7_qdoyo")
-instance_shader_parameters/surface_kind = 0
-mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomFrontJunction" index="1" unique_id=33831246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 1.3, 0.1)
@@ -287,15 +238,10 @@ shape = SubResource("BoxShape3D_mcbyo")
 
 [node name="BathroomCornerFill" parent="Architecture/Partitions" unique_id=1858909599 instance=ExtResource("2_ger7r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, -1.2)
-metadata/source_module = "wall_0p5m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.2
 
 [node name="Mesh" parent="Architecture/Partitions/BathroomCornerFill" index="0" unique_id=72799143]
 transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("7_qdoyo")
-instance_shader_parameters/surface_kind = 0
-mesh = ExtResource("8_pgqe2")
 
 [node name="Collision" parent="Architecture/Partitions/BathroomCornerFill" index="1" unique_id=33831246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 1.3, 0.1)
@@ -303,56 +249,35 @@ shape = SubResource("BoxShape3D_t8yfd")
 
 [node name="Floor" type="Node3D" parent="Architecture" unique_id=390011825]
 
-[node name="Floor_0_0" type="StaticBody3D" parent="Architecture/Floor" unique_id=1149167822 instance=ExtResource("9_6uf85")]
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
+[node name="Floor_0_0" parent="Architecture/Floor" unique_id=1149167822 instance=ExtResource("9_6uf85")]
 
-[node name="Floor_0_2" type="StaticBody3D" parent="Architecture/Floor" unique_id=1044777373 instance=ExtResource("9_6uf85")]
+[node name="Floor_0_2" parent="Architecture/Floor" unique_id=1044777373 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_0_4" type="StaticBody3D" parent="Architecture/Floor" unique_id=1015263981 instance=ExtResource("9_6uf85")]
+[node name="Floor_0_4" parent="Architecture/Floor" unique_id=1015263981 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_0_6" type="StaticBody3D" parent="Architecture/Floor" unique_id=508890716 instance=ExtResource("9_6uf85")]
+[node name="Floor_0_6" parent="Architecture/Floor" unique_id=508890716 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_2_0" type="StaticBody3D" parent="Architecture/Floor" unique_id=1621235590 instance=ExtResource("9_6uf85")]
+[node name="Floor_2_0" parent="Architecture/Floor" unique_id=1621235590 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_2_2" type="StaticBody3D" parent="Architecture/Floor" unique_id=1977976893 instance=ExtResource("9_6uf85")]
+[node name="Floor_2_2" parent="Architecture/Floor" unique_id=1977976893 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_2_4" type="StaticBody3D" parent="Architecture/Floor" unique_id=1476742303 instance=ExtResource("9_6uf85")]
+[node name="Floor_2_4" parent="Architecture/Floor" unique_id=1476742303 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
-[node name="Floor_2_6" type="StaticBody3D" parent="Architecture/Floor" unique_id=1887771262 instance=ExtResource("9_6uf85")]
+[node name="Floor_2_6" parent="Architecture/Floor" unique_id=1887771262 instance=ExtResource("9_6uf85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
-metadata/source_module = "floor_2m"
-metadata/grid_m = 0.5
 
 [node name="FloorEdge_0" parent="Architecture/Floor" unique_id=179799343 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_0" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_0" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -360,15 +285,10 @@ shape = SubResource("BoxShape3D_abnhm")
 
 [node name="FloorEdge_1" parent="Architecture/Floor" unique_id=160756731 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_1" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_1" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -376,15 +296,10 @@ shape = SubResource("BoxShape3D_wmhnw")
 
 [node name="FloorEdge_2" parent="Architecture/Floor" unique_id=1236892803 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_2" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_2" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -392,15 +307,10 @@ shape = SubResource("BoxShape3D_ka2gq")
 
 [node name="FloorEdge_3" parent="Architecture/Floor" unique_id=4058259 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_3" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_3" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -408,15 +318,10 @@ shape = SubResource("BoxShape3D_lwuul")
 
 [node name="FloorEdge_4" parent="Architecture/Floor" unique_id=1301705048 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_4" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_4" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -424,15 +329,10 @@ shape = SubResource("BoxShape3D_iih7i")
 
 [node name="FloorEdge_5" parent="Architecture/Floor" unique_id=1945124594 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_5" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_5" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -440,15 +340,10 @@ shape = SubResource("BoxShape3D_7ilt0")
 
 [node name="FloorEdge_6" parent="Architecture/Floor" unique_id=93817159 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_6" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_6" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -456,15 +351,10 @@ shape = SubResource("BoxShape3D_ckyyt")
 
 [node name="FloorEdge_7" parent="Architecture/Floor" unique_id=1493296627 instance=ExtResource("10_vssto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
-metadata/source_module = "floor_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Floor/FloorEdge_7" index="0" unique_id=1234226745]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("11_8wewy")
-instance_shader_parameters/surface_kind = 1
-mesh = ExtResource("12_ltutq")
 
 [node name="Collision" parent="Architecture/Floor/FloorEdge_7" index="1" unique_id=1598877739]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -0.08, -0.5)
@@ -472,57 +362,36 @@ shape = SubResource("BoxShape3D_lqrw6")
 
 [node name="Ceiling" type="Node3D" parent="Architecture" unique_id=1279540781]
 
-[node name="Ceiling_0_0" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1484369282 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_0_0" parent="Architecture/Ceiling" unique_id=1484369282 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_0_2" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1552305163 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_0_2" parent="Architecture/Ceiling" unique_id=1552305163 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -2)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_0_4" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=2031334138 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_0_4" parent="Architecture/Ceiling" unique_id=2031334138 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -4)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_0_6" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1815228912 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_0_6" parent="Architecture/Ceiling" unique_id=1815228912 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, -6)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_2_0" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1092949684 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_2_0" parent="Architecture/Ceiling" unique_id=1092949684 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, 0)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_2_2" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1475482941 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_2_2" parent="Architecture/Ceiling" unique_id=1475482941 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -2)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_2_4" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=1804238337 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_2_4" parent="Architecture/Ceiling" unique_id=1804238337 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -4)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
-[node name="Ceiling_2_6" type="StaticBody3D" parent="Architecture/Ceiling" unique_id=631886750 instance=ExtResource("13_11vn0")]
+[node name="Ceiling_2_6" parent="Architecture/Ceiling" unique_id=631886750 instance=ExtResource("13_11vn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.6, -6)
-metadata/source_module = "ceiling_2m"
-metadata/grid_m = 0.5
 
 [node name="CeilingEdge_0" parent="Architecture/Ceiling" unique_id=1503082573 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, 0)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_0" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_0" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -530,15 +399,10 @@ shape = SubResource("BoxShape3D_sart6")
 
 [node name="CeilingEdge_1" parent="Architecture/Ceiling" unique_id=1954686614 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -1)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_1" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_1" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -546,15 +410,10 @@ shape = SubResource("BoxShape3D_61bug")
 
 [node name="CeilingEdge_2" parent="Architecture/Ceiling" unique_id=1229024809 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -2)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_2" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_2" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -562,15 +421,10 @@ shape = SubResource("BoxShape3D_lpfdt")
 
 [node name="CeilingEdge_3" parent="Architecture/Ceiling" unique_id=561765390 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -3)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_3" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_3" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -578,15 +432,10 @@ shape = SubResource("BoxShape3D_sulo6")
 
 [node name="CeilingEdge_4" parent="Architecture/Ceiling" unique_id=425285412 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -4)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_4" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_4" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -594,15 +443,10 @@ shape = SubResource("BoxShape3D_kuc2m")
 
 [node name="CeilingEdge_5" parent="Architecture/Ceiling" unique_id=1642726671 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -5)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_5" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_5" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -610,15 +454,10 @@ shape = SubResource("BoxShape3D_6j2xt")
 
 [node name="CeilingEdge_6" parent="Architecture/Ceiling" unique_id=1257220569 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -6)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_6" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_6" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
@@ -626,19 +465,131 @@ shape = SubResource("BoxShape3D_rf203")
 
 [node name="CeilingEdge_7" parent="Architecture/Ceiling" unique_id=1958302135 instance=ExtResource("14_lgda7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.6, -7)
-metadata/source_module = "ceiling_1m"
-metadata/grid_m = 0.5
 metadata/fitted_width_m = 0.5
 
 [node name="Mesh" parent="Architecture/Ceiling/CeilingEdge_7" index="0" unique_id=1518239144]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("15_wlv7f")
-instance_shader_parameters/surface_kind = 2
-mesh = ExtResource("16_4w7r7")
 
 [node name="Collision" parent="Architecture/Ceiling/CeilingEdge_7" index="1" unique_id=252810862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.06, -0.5)
 shape = SubResource("BoxShape3D_4uend")
+
+[node name="Furnishings" type="Node3D" parent="." unique_id=60382306]
+metadata/description_ru = "Пробная расстановка 19.10.2026. Экземпляры одобренных моделей, доступные для редактирования."
+
+[node name="LivingRoom" type="Node3D" parent="Furnishings" unique_id=1281872908]
+
+[node name="ComputerDesk" parent="Furnishings/LivingRoom" unique_id=1371877593 instance=ExtResource("prop_computer_desk_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45, 0, -7.28)
+
+[node name="DesktopComputer" parent="Furnishings/LivingRoom" unique_id=1670404256 instance=ExtResource("prop_desktop_computer_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.75, -7.4014306)
+
+[node name="CRTMonitor" parent="Furnishings/LivingRoom" unique_id=67105901 instance=ExtResource("prop_crt_monitor_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.92, -7.4014306)
+illumination_enabled = true
+
+[node name="Keyboard" parent="Furnishings/LivingRoom" unique_id=1614136159 instance=ExtResource("prop_keyboard_01")]
+transform = Transform3D(0.9968653, 0, 0.07911796, 0, 1, 0, -0.07911796, 0, 0.9968653, 2.1642091, 0.75, -7.02685)
+
+[node name="DeskChair" parent="Furnishings/LivingRoom" unique_id=1693262690 instance=ExtResource("prop_desk_chair_01")]
+transform = Transform3D(-0.69342595, 0, 0.7205278, 0, 1, 0, -0.7205278, 0, -0.69342595, 1.9591012, 0, -6.6303077)
+
+[node name="Radio" parent="Furnishings/LivingRoom" unique_id=235600947 instance=ExtResource("prop_radio_transceiver_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94, 0.75, -7.22)
+illumination_enabled = true
+
+[node name="DigitalClock" parent="Furnishings/LivingRoom" unique_id=1942232318 instance=ExtResource("prop_digital_clock_01")]
+transform = Transform3D(0.9814581, 0, 0.19167738, 0, 1, 0, -0.19167738, 0, 0.9814581, 1.8227345, 0.75, -7.1712904)
+
+[node name="Mug" parent="Furnishings/LivingRoom" unique_id=1917202120 instance=ExtResource("prop_mug_01")]
+transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, 2.4671175, 0.75, -7.0836143)
+
+[node name="Bed" parent="Furnishings/LivingRoom" unique_id=500524831 instance=ExtResource("prop_single_bed_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62, 0, -6.4)
+
+[node name="LowShelf" parent="Furnishings/LivingRoom" unique_id=882970679 instance=ExtResource("prop_low_shelf_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.18, 0, -4.35)
+
+[node name="Window" parent="Furnishings/LivingRoom" unique_id=167575997 instance=ExtResource("prop_window_frame_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.9, -8.1)
+
+[node name="Radiator" parent="Furnishings/LivingRoom" unique_id=2004565125 instance=ExtResource("prop_radiator_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.12, -7.87)
+
+[node name="HangingBulb" parent="Furnishings/LivingRoom" unique_id=169712928 instance=ExtResource("prop_hanging_bulb_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.6, -5.4)
+metadata/placement_note_ru = "Выключенная лампочка. Источник общего света не добавлен."
+
+[node name="PowerStrip" parent="Furnishings/LivingRoom" unique_id=1714058793 instance=ExtResource("prop_power_strip_01")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.0916486, 0.7501457, -7.598213)
+metadata/placement_note_ru = "Выключен; кабель и подключение ещё не реализованы."
+
+[node name="SparePowerPlug" parent="Furnishings/LivingRoom" unique_id=1982074533 instance=ExtResource("prop_power_plug_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62, 0.008, -7.5)
+visible = false
+metadata/placement_note_ru = "Отдельная запасная вилка рядом с удлинителем, без физического кабеля."
+
+[node name="Kitchen" type="Node3D" parent="Furnishings" unique_id=833972908]
+metadata/description_ru = "Линейная расстановка вдоль внешней стены; дверной проём свободен."
+
+[node name="Fridge" parent="Furnishings/Kitchen" unique_id=1207823519 instance=ExtResource("prop_compact_fridge_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3, 0, -0.5)
+
+[node name="Counter" parent="Furnishings/Kitchen" unique_id=638057996 instance=ExtResource("prop_kitchen_counter_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3, 0, -1.42)
+
+[node name="Sink" parent="Furnishings/Kitchen" unique_id=1836352722 instance=ExtResource("prop_sink_cabinet_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3, 0, -2.08)
+
+[node name="Stove" parent="Furnishings/Kitchen" unique_id=680402249 instance=ExtResource("prop_compact_stove_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3, 0, -2.84)
+
+[node name="WallShelf" parent="Furnishings/Kitchen" unique_id=350375953 instance=ExtResource("prop_kitchen_shelf_01")]
+transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, 0.01, 1.62, -1.7)
+
+[node name="CookingPot" parent="Furnishings/Kitchen" unique_id=1721850285 instance=ExtResource("prop_cooking_pot_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32, 0.905, -2.72)
+
+[node name="Bathroom" type="Node3D" parent="Furnishings" unique_id=790662926]
+
+[node name="Bathtub" parent="Furnishings/Bathroom" unique_id=195558716 instance=ExtResource("prop_bathtub_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14, 0, -2.23)
+
+[node name="Sink" parent="Furnishings/Bathroom" unique_id=996560444 instance=ExtResource("prop_bathroom_sink_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, 0, -3.28)
+
+[node name="Mirror" parent="Furnishings/Bathroom" unique_id=1704090668 instance=ExtResource("prop_bathroom_mirror_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, 1.2, -3.285)
+
+[node name="Toilet" parent="Furnishings/Bathroom" unique_id=52836020 instance=ExtResource("prop_toilet_01")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.25, 0, -1.58)
+
+[node name="EntranceHall" type="Node3D" parent="Furnishings" unique_id=2054256621]
+
+[node name="WallHooks" parent="Furnishings/EntranceHall" unique_id=266554962 instance=ExtResource("prop_wall_hooks_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55, 1.6, -0.985)
+metadata/placement_note_ru = "Планка у входа в свободной нише."
+
+[node name="Doors" type="Node3D" parent="Furnishings" unique_id=470564004]
+metadata/description_ru = "Входная дверь закрыта. Внутренние полотна статично открыты для прохода; механика открывания не добавлена."
+
+[node name="EntranceDoor" parent="Furnishings/Doors" unique_id=1425857446 instance=ExtResource("prop_entrance_door_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, 0.2)
+
+[node name="LivingRoomDoor" parent="Furnishings/Doors" unique_id=1997906992 instance=ExtResource("prop_interior_door_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0, -3.3)
+metadata/placement_note_ru = "Открыта внутрь жилой комнаты, навеска пробная."
+
+[node name="DoorLeaf" parent="Furnishings/Doors/LivingRoomDoor/Model/interior_door_01" parent_id_path=PackedInt32Array(1997906992, 1322240575, 1782933972) index="0" unique_id=224749224]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.02, 0, -0.02)
+
+[node name="BathroomDoor" parent="Furnishings/Doors" unique_id=441623537 instance=ExtResource("prop_interior_door_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.94, 0, -2.1)
+metadata/placement_note_ru = "Открыта на 180 градусов вдоль перегородки внутри санузла; навеска пробная."
+
+[node name="DoorLeaf" parent="Furnishings/Doors/BathroomDoor/Model/interior_door_01" parent_id_path=PackedInt32Array(441623537, 1322240575, 1782933972) index="0" unique_id=224749224]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.02, 0, -0.02)
 
 [node name="RoomMarkers" type="Node3D" parent="." unique_id=2096518847]
 
@@ -657,24 +608,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -1.5)
 [node name="HallNiche" type="Marker3D" parent="RoomMarkers" unique_id=1040508157]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.5)
 
-[node name="PreviewDeviceLighting" type="Node3D" parent="." unique_id=1293282081]
-metadata/description_ru = "Временная имитация света монитора и радио для осмотра геометрии; модели устройств будут добавлены отдельно."
-
-[node name="MonitorGlowPreview" type="OmniLight3D" parent="PreviewDeviceLighting" unique_id=1172722131]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05, 1.1, -7.45)
-light_color = Color(0.58, 0.78, 0.64, 1)
-light_energy = 3.0
-shadow_enabled = true
-omni_range = 6.5
-omni_attenuation = 1.25
-
-[node name="RadioGlowPreview" type="OmniLight3D" parent="PreviewDeviceLighting" unique_id=1381119026]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0.95, -7.4)
-light_color = Color(0.85, 0.44, 0.14, 1)
-light_energy = 0.7
-shadow_enabled = true
-omni_range = 4.0
-
 [node name="EntranceBoundary" type="StaticBody3D" parent="." unique_id=1833404841]
 metadata/description_ru = "Временная граница уровня за входным проёмом. Удалить при подключении общего коридора; это не дверь."
 
@@ -685,14 +618,10 @@ shape = SubResource("BoxShape3D_623u4")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=138615423]
 environment = SubResource("Environment_x2fjh")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=1294470685 instance=ExtResource("17_g51i4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0.05, -4.3)
-floor_snap_length = 0.2
-script = ExtResource("18_0sqtc")
+[node name="Player" parent="." unique_id=1294470685 instance=ExtResource("17_g51i4")]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.9999998, 0, 0, 0, 1.0000001, 2.232, 0, -5)
 
-[node name="AsciiRenderer" type="CanvasLayer" parent="." unique_id=1811410683 instance=ExtResource("19_twbfp")]
-layer = 10
-script = ExtResource("20_ufmtr")
+[node name="AsciiRenderer" parent="." unique_id=1811410683 instance=ExtResource("19_twbfp")]
 brightness = 1.65
 contrast = 0.95
 gamma = 0.85
@@ -717,3 +646,11 @@ gamma = 0.85
 [editable path="Architecture/Ceiling/CeilingEdge_5"]
 [editable path="Architecture/Ceiling/CeilingEdge_6"]
 [editable path="Architecture/Ceiling/CeilingEdge_7"]
+[editable path="Furnishings/LivingRoom/CRTMonitor"]
+[editable path="Furnishings/LivingRoom/CRTMonitor/Model"]
+[editable path="Furnishings/LivingRoom/Radio"]
+[editable path="Furnishings/LivingRoom/Radio/Model"]
+[editable path="Furnishings/Doors/LivingRoomDoor"]
+[editable path="Furnishings/Doors/LivingRoomDoor/Model"]
+[editable path="Furnishings/Doors/BathroomDoor"]
+[editable path="Furnishings/Doors/BathroomDoor/Model"]
