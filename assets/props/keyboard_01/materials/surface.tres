@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://shaders/prop_surface.gdshader" id="1_k83gl"]
+[ext_resource type="Texture2D" path="res://assets/props/keyboard_01/textures/keyboard_basecolor.png" id="2_1c2mp"]
+[ext_resource type="Texture2D" path="res://assets/props/keyboard_01/textures/keyboard_roughness.png" id="3_aryo1"]
+
+[resource]
+resource_name = "Shared opaque surface keyboard_01"
+render_priority = 0
+shader = ExtResource("1_k83gl")
+shader_parameter/color_texture = ExtResource("2_1c2mp")
+shader_parameter/roughness_texture = ExtResource("3_aryo1")
+shader_parameter/dark_color = Color(0.005, 0.008, 0.006, 1)
+shader_parameter/power_color = Color(0.012, 0.045, 0.022, 1)
+shader_parameter/status_color = Color(0.012, 0.045, 0.022, 1)
+shader_parameter/aux_color = Color(0.012, 0.045, 0.022, 1)
+shader_parameter/power_emission = Color(1, 1, 1, 1)
+shader_parameter/status_emission = Color(1, 1, 1, 1)
+shader_parameter/aux_emission = Color(1, 1, 1, 1)

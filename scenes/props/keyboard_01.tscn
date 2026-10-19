@@ -1,0 +1,329 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/props/keyboard_01/keyboard_01_shared.glb" id="1_ok2y4"]
+[ext_resource type="Material" path="res://assets/props/keyboard_01/materials/surface.tres" id="2_ol64k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j72j5"]
+size = Vector3(0.45, 0.035, 0.18)
+
+[node name="Keyboard01" type="StaticBody3D" unique_id=838730756]
+metadata/asset_id = "keyboard_01"
+metadata/approved_source_version = 3
+metadata/material_optimization = "shared opaque surface; static geometry consolidated"
+
+[node name="BodyCollision" type="CollisionShape3D" parent="." unique_id=163192428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0175, 0)
+shape = SubResource("BoxShape3D_j72j5")
+
+[node name="Model" parent="." unique_id=1939251248 instance=ExtResource("1_ok2y4")]
+
+[node name="CaseSurface" parent="Model/keyboard_01" parent_id_path=PackedInt32Array(1939251248, 508770281) index="2" unique_id=1412762512]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_083" parent="Model/keyboard_01/Keycaps/ArrowsLeftDownRight" parent_id_path=PackedInt32Array(1939251248, 1696468978) index="0" unique_id=1230087274]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_084" parent="Model/keyboard_01/Keycaps/ArrowsLeftDownRight" parent_id_path=PackedInt32Array(1939251248, 1696468978) index="1" unique_id=487595680]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_085" parent="Model/keyboard_01/Keycaps/ArrowsLeftDownRight" parent_id_path=PackedInt32Array(1939251248, 1696468978) index="2" unique_id=497202668]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_082" parent="Model/keyboard_01/Keycaps/ArrowUp" parent_id_path=PackedInt32Array(1939251248, 577597775) index="0" unique_id=1149584343]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_029" parent="Model/keyboard_01/Keycaps/EnterKey" parent_id_path=PackedInt32Array(1939251248, 1041083162) index="0" unique_id=807707106]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_060" parent="Model/keyboard_01/Keycaps/Escape" parent_id_path=PackedInt32Array(1939251248, 1810218166) index="0" unique_id=1521410413]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_061" parent="Model/keyboard_01/Keycaps/Function_01_04" parent_id_path=PackedInt32Array(1939251248, 1894864953) index="0" unique_id=1236252281]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_062" parent="Model/keyboard_01/Keycaps/Function_01_04" parent_id_path=PackedInt32Array(1939251248, 1894864953) index="1" unique_id=1347483320]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_063" parent="Model/keyboard_01/Keycaps/Function_01_04" parent_id_path=PackedInt32Array(1939251248, 1894864953) index="2" unique_id=96232256]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_064" parent="Model/keyboard_01/Keycaps/Function_01_04" parent_id_path=PackedInt32Array(1939251248, 1894864953) index="3" unique_id=1069721305]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_065" parent="Model/keyboard_01/Keycaps/Function_05_08" parent_id_path=PackedInt32Array(1939251248, 2041951681) index="0" unique_id=477190722]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_066" parent="Model/keyboard_01/Keycaps/Function_05_08" parent_id_path=PackedInt32Array(1939251248, 2041951681) index="1" unique_id=1102126707]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_067" parent="Model/keyboard_01/Keycaps/Function_05_08" parent_id_path=PackedInt32Array(1939251248, 2041951681) index="2" unique_id=814878210]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_068" parent="Model/keyboard_01/Keycaps/Function_05_08" parent_id_path=PackedInt32Array(1939251248, 2041951681) index="3" unique_id=1296522288]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_069" parent="Model/keyboard_01/Keycaps/Function_09_12" parent_id_path=PackedInt32Array(1939251248, 1611768238) index="0" unique_id=1514129685]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_070" parent="Model/keyboard_01/Keycaps/Function_09_12" parent_id_path=PackedInt32Array(1939251248, 1611768238) index="1" unique_id=1916124734]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_071" parent="Model/keyboard_01/Keycaps/Function_09_12" parent_id_path=PackedInt32Array(1939251248, 1611768238) index="2" unique_id=1825336403]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_072" parent="Model/keyboard_01/Keycaps/Function_09_12" parent_id_path=PackedInt32Array(1939251248, 1611768238) index="3" unique_id=1701639661]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_054" parent="Model/keyboard_01/Keycaps/LeftModifiers" parent_id_path=PackedInt32Array(1939251248, 1154887505) index="0" unique_id=1205798903]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_055" parent="Model/keyboard_01/Keycaps/LeftModifiers" parent_id_path=PackedInt32Array(1939251248, 1154887505) index="1" unique_id=135905426]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_076" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="0" unique_id=1092682471]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_077" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="1" unique_id=2133102124]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_078" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="2" unique_id=1913450146]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_079" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="3" unique_id=1422206069]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_080" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="4" unique_id=207910976]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_081" parent="Model/keyboard_01/Keycaps/NavigationBlock" parent_id_path=PackedInt32Array(1939251248, 477244164) index="5" unique_id=665106764]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_086" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="0" unique_id=1431608984]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_087" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="1" unique_id=1493201887]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_088" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="2" unique_id=2129472380]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_089" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="3" unique_id=865161164]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_090" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="4" unique_id=2042955960]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_091" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="5" unique_id=647560923]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_092" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="6" unique_id=1829271043]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_093" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="7" unique_id=1801007847]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_094" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="8" unique_id=919047312]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_095" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="9" unique_id=305883864]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_096" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="10" unique_id=978139752]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_097" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="11" unique_id=174611317]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_098" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="12" unique_id=125764971]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_099" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="13" unique_id=1078095190]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_100" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="14" unique_id=2050154521]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_101" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="15" unique_id=1172295274]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_102" parent="Model/keyboard_01/Keycaps/NumericKeypad" parent_id_path=PackedInt32Array(1939251248, 406280629) index="16" unique_id=715326803]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_057" parent="Model/keyboard_01/Keycaps/RightModifiers" parent_id_path=PackedInt32Array(1939251248, 154047850) index="0" unique_id=2120783879]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_058" parent="Model/keyboard_01/Keycaps/RightModifiers" parent_id_path=PackedInt32Array(1939251248, 154047850) index="1" unique_id=1658250040]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_059" parent="Model/keyboard_01/Keycaps/RightModifiers" parent_id_path=PackedInt32Array(1939251248, 154047850) index="2" unique_id=546578304]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_056" parent="Model/keyboard_01/Keycaps/Spacebar" parent_id_path=PackedInt32Array(1939251248, 364987590) index="0" unique_id=1206116063]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_073" parent="Model/keyboard_01/Keycaps/SystemKeys" parent_id_path=PackedInt32Array(1939251248, 809766843) index="0" unique_id=1018750863]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_074" parent="Model/keyboard_01/Keycaps/SystemKeys" parent_id_path=PackedInt32Array(1939251248, 809766843) index="1" unique_id=313529454]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_075" parent="Model/keyboard_01/Keycaps/SystemKeys" parent_id_path=PackedInt32Array(1939251248, 809766843) index="2" unique_id=359177618]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_001" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="0" unique_id=1338610048]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_002" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="1" unique_id=697240664]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_003" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="2" unique_id=610058938]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_004" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="3" unique_id=1820223244]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_005" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="4" unique_id=1251044093]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_006" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="5" unique_id=256618368]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_007" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="6" unique_id=6710782]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_008" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="7" unique_id=494218019]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_009" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="8" unique_id=1974307847]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_010" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="9" unique_id=463599371]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_011" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="10" unique_id=1664556802]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_012" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="11" unique_id=336853370]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_013" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="12" unique_id=1311963312]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_014" parent="Model/keyboard_01/Keycaps/TypingRow_00" parent_id_path=PackedInt32Array(1939251248, 2083852571) index="13" unique_id=36159357]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_015" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="0" unique_id=312593965]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_016" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="1" unique_id=1358131066]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_017" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="2" unique_id=1429243519]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_018" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="3" unique_id=210257210]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_019" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="4" unique_id=644474143]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_020" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="5" unique_id=1067510168]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_021" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="6" unique_id=480925231]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_022" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="7" unique_id=438401741]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_023" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="8" unique_id=34387215]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_024" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="9" unique_id=1968518810]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_025" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="10" unique_id=992362195]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_026" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="11" unique_id=990384612]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_027" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="12" unique_id=1769441474]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_028" parent="Model/keyboard_01/Keycaps/TypingRow_01" parent_id_path=PackedInt32Array(1939251248, 66525804) index="13" unique_id=1049131]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_030" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="0" unique_id=285093335]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_031" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="1" unique_id=1864086723]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_032" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="2" unique_id=1319519975]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_033" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="3" unique_id=198997141]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_034" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="4" unique_id=501239137]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_035" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="5" unique_id=1150917697]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_036" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="6" unique_id=1364539888]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_037" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="7" unique_id=1983630731]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_038" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="8" unique_id=1287072315]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_039" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="9" unique_id=1082736847]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_040" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="10" unique_id=46221048]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_041" parent="Model/keyboard_01/Keycaps/TypingRow_02" parent_id_path=PackedInt32Array(1939251248, 1482845682) index="11" unique_id=464554065]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_042" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="0" unique_id=1955205222]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_043" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="1" unique_id=1097976234]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_044" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="2" unique_id=1702628233]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_045" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="3" unique_id=521010944]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_046" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="4" unique_id=131345835]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_047" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="5" unique_id=711778596]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_048" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="6" unique_id=389556006]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_049" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="7" unique_id=1993329205]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_050" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="8" unique_id=205878056]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_051" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="9" unique_id=313167582]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_052" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="10" unique_id=1580745121]
+material_override = ExtResource("2_ol64k")
+
+[node name="Key_053" parent="Model/keyboard_01/Keycaps/TypingRow_03" parent_id_path=PackedInt32Array(1939251248, 1477010066) index="11" unique_id=838139975]
+material_override = ExtResource("2_ol64k")
+
+[editable path="Model"]
