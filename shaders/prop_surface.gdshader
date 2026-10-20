@@ -6,6 +6,8 @@ uniform sampler2D color_texture : source_color, filter_nearest_mipmap;
 uniform sampler2D roughness_texture : hint_default_white, filter_nearest_mipmap;
 // Для печатных светящихся шкал: рисунок остаётся в общем атласе предмета.
 uniform bool power_uses_color_texture = false;
+// Необязательная трёхцветная линза выключателя; у прежних материалов выключено.
+uniform bool power_uses_tristate_indicator = false;
 // Сменные материалы лампочки: нулевые значения сохраняют прежнее поведение.
 uniform bool power_emission_uses_surface_color = true;
 uniform float power_material_level : hint_range(0.0, 4.0) = 0.0;
@@ -19,6 +21,7 @@ uniform vec4 aux_emission : source_color = vec4(0.06, 0.7, 0.22, 1.0);
 instance uniform float power_led_level : hint_range(0.0, 4.0) = 0.0;
 instance uniform float status_led_level : hint_range(0.0, 4.0) = 0.0;
 instance uniform float aux_led_level : hint_range(0.0, 4.0) = 0.0;
+instance uniform float indicator_state : hint_range(0.0, 2.0) = 0.0;
 
 void fragment() {
 	float power_level = max(power_led_level, power_material_level);
@@ -33,7 +36,14 @@ void fragment() {
 	} else if (kind == 1) {
 		ALBEDO = dark_color.rgb;
 	} else if (kind == 2) {
-		if (power_uses_color_texture) {
+		if (power_uses_tristate_indicator) {
+			int state = int(round(clamp(indicator_state, 0.0, 2.0)));
+			// Линейные цвета совпадают с одобренным Blender-материалом.
+			ALBEDO = state == 1 ? vec3(0.32, 0.012, 0.008)
+				: (state == 2 ? vec3(0.008, 0.22, 0.024) : vec3(0.001));
+			ROUGHNESS *= texture(roughness_texture, UV).r;
+			EMISSION = state == 0 ? vec3(0.0) : ALBEDO * 0.45;
+		} else if (power_uses_color_texture) {
 			vec3 printed_color = texture(color_texture, UV).rgb;
 			ALBEDO = printed_color;
 			ROUGHNESS *= texture(roughness_texture, UV).r;
