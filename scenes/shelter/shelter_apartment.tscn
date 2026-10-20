@@ -13,6 +13,10 @@
 [ext_resource type="Material" path="res://assets/props/crt_monitor_01/materials/screen_on.tres" id="14_lo2gf"]
 [ext_resource type="PackedScene" path="res://scenes/player/first_person_player.tscn" id="17_g51i4"]
 [ext_resource type="PackedScene" path="res://addons/ascii_renderer/ascii_renderer.tscn" id="19_twbfp"]
+[ext_resource type="PackedScene" path="res://scenes/props/light_switch_single_01.tscn" id="electrical_light_switch_single_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/wall_socket_covered_01.tscn" id="electrical_wall_socket_covered_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/wall_socket_double_01.tscn" id="electrical_wall_socket_double_01"]
+[ext_resource type="PackedScene" path="res://scenes/props/wall_socket_single_01.tscn" id="electrical_wall_socket_single_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/bathroom_mirror_01.tscn" id="prop_bathroom_mirror_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/bathroom_sink_01.tscn" id="prop_bathroom_sink_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/bathtub_01.tscn" id="prop_bathtub_01"]
@@ -532,6 +536,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.9, -8.1)
 [node name="Radiator" parent="Furnishings/LivingRoom" unique_id=2004565125 instance=ExtResource("prop_radiator_01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.12, -7.87)
 
+[node name="HangingBulb4" parent="Furnishings/LivingRoom" unique_id=1424053526 instance=ExtResource("prop_hanging_bulb_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.712003, 2.6, -1.9905086)
+metadata/placement_note_ru = "Свет санузла; управляется BathroomLightSwitch. Изначально выключен."
+
+[node name="HangingBulb3" parent="Furnishings/LivingRoom" unique_id=838142929 instance=ExtResource("prop_hanging_bulb_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7929173, 2.6, -1.7432721)
+metadata/placement_note_ru = "Свет кухни; управляется KitchenLightSwitch. Изначально выключен."
+
+[node name="HangingBulb2" parent="Furnishings/LivingRoom" unique_id=983658044 instance=ExtResource("prop_hanging_bulb_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.6, -0.90432775)
+metadata/placement_note_ru = "Свет прихожей; управляется EntranceLightSwitch. Изначально выключен."
+
 [node name="HangingBulb" parent="Furnishings/LivingRoom" unique_id=169712928 instance=ExtResource("prop_hanging_bulb_01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.6, -5.4)
 metadata/placement_note_ru = "Свет жилой комнаты; управляется LivingRoomLightSwitch. Изначально выключен."
@@ -606,6 +622,45 @@ metadata/placement_note_ru = "Открыта на 180 градусов вдол�
 
 [node name="DoorLeaf" parent="Furnishings/Doors/BathroomDoor/Model/interior_door_01" parent_id_path=PackedInt32Array(441623537, 1322240575, 1782933972) index="0" unique_id=224749224]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.02, 0, -0.02)
+
+[node name="Electrical" type="Node3D" parent="Furnishings" unique_id=2246838]
+metadata/description_ru = "Розетки и выключатели. Выключатели связаны с лампами своих помещений; подключение розеток и симуляция электросети не реализованы."
+
+[node name="Sockets" type="Node3D" parent="Furnishings/Electrical" unique_id=987360272]
+
+[node name="ComputerDoubleSocket" parent="Furnishings/Electrical/Sockets" unique_id=655260671 instance=ExtResource("electrical_wall_socket_double_01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97, 1.22, -7.999)
+metadata/placement_note_ru = "Двойная розетка у компьютера: над столом справа от монитора и выше радио, доступна спереди."
+
+[node name="BedsideSocket" parent="Furnishings/Electrical/Sockets" unique_id=339771016 instance=ExtResource("electrical_wall_socket_single_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.001, 0.72, -7.1)
+metadata/placement_note_ru = "Одинарная розетка у изголовья кровати, над подушкой и матрасом, на свободной боковой стене."
+
+[node name="KitchenCoveredSocket" parent="Furnishings/Electrical/Sockets" unique_id=649721017 instance=ExtResource("electrical_wall_socket_covered_01")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.001, 1.18, -1.4)
+metadata/placement_note_ru = "Розетка с крышкой над кухонной тумбой: ниже полки, со стороны рабочей поверхности, в стороне от мойки и плиты."
+
+[node name="Switches" type="Node3D" parent="Furnishings/Electrical" unique_id=912629263]
+
+[node name="EntranceLightSwitch" parent="Furnishings/Electrical/Switches" unique_id=374747267 node_paths=PackedStringArray("lamps") instance=ExtResource("electrical_light_switch_single_01")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.12, 1.2, -0.001)
+lamps = [NodePath("../../../LivingRoom/HangingBulb2")]
+metadata/placement_note_ru = "Выключатель прихожей справа от входной двери, со стороны квартиры."
+
+[node name="LivingRoomLightSwitch" parent="Furnishings/Electrical/Switches" unique_id=2040309370 node_paths=PackedStringArray("lamps") instance=ExtResource("electrical_light_switch_single_01")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.12, 1.2, -3.501)
+lamps = [NodePath("../../../LivingRoom/HangingBulb")]
+metadata/placement_note_ru = "Выключатель жилой комнаты справа от проёма, с внутренней стороны комнаты."
+
+[node name="KitchenLightSwitch" parent="Furnishings/Electrical/Switches" unique_id=518592255 node_paths=PackedStringArray("lamps") instance=ExtResource("electrical_light_switch_single_01")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4999293, 1.2, -1.0447359)
+lamps = [NodePath("../../../LivingRoom/HangingBulb3")]
+metadata/placement_note_ru = "Выключатель кухни на простенке у проёма, со стороны прохода."
+
+[node name="BathroomLightSwitch" parent="Furnishings/Electrical/Switches" unique_id=1331521074 node_paths=PackedStringArray("lamps") instance=ExtResource("electrical_light_switch_single_01")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.699, 1.2, -1.8960359)
+lamps = [NodePath("../../../LivingRoom/HangingBulb4")]
+metadata/placement_note_ru = "Выключатель санузла снаружи, на свободном простенке рядом с дверью."
 
 [node name="RoomMarkers" type="Node3D" parent="." unique_id=2096518847]
 
