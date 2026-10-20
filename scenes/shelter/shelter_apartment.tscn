@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://scenes/architecture/floor_1m.tscn" id="10_vssto"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_2m.tscn" id="13_11vn0"]
 [ext_resource type="PackedScene" path="res://scenes/architecture/ceiling_1m.tscn" id="14_lgda7"]
+[ext_resource type="Material" path="res://assets/props/crt_monitor_01/materials/screen_on.tres" id="14_lo2gf"]
 [ext_resource type="PackedScene" path="res://scenes/player/first_person_player.tscn" id="17_g51i4"]
 [ext_resource type="PackedScene" path="res://addons/ascii_renderer/ascii_renderer.tscn" id="19_twbfp"]
 [ext_resource type="PackedScene" path="res://scenes/props/bathroom_mirror_01.tscn" id="prop_bathroom_mirror_01"]
@@ -35,7 +36,7 @@
 [ext_resource type="PackedScene" path="res://scenes/props/power_strip_01.tscn" id="prop_power_strip_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/radiator_01.tscn" id="prop_radiator_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/radio_transceiver_01.tscn" id="prop_radio_transceiver_01"]
-[ext_resource type="PackedScene" path="res://scenes/props/single_bed_01.tscn" id="prop_single_bed_01"]
+[ext_resource type="PackedScene" uid="uid://c3o2yb727bto7" path="res://scenes/props/single_bed_01.tscn" id="prop_single_bed_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/sink_cabinet_01.tscn" id="prop_sink_cabinet_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/toilet_01.tscn" id="prop_toilet_01"]
 [ext_resource type="PackedScene" path="res://scenes/props/wall_hooks_01.tscn" id="prop_wall_hooks_01"]
@@ -114,7 +115,7 @@ reflected_light_source = 1
 tonemap_mode = 2
 
 [node name="ShelterApartment" type="Node3D" unique_id=294848804]
-metadata/description_ru = "Первая расстановка импортированных моделей: компьютер у окна, кровать слева, кухня и санузел. Статичные предметы; взаимодействия не реализованы."
+metadata/description_ru = "Квартира: компьютер у окна, кровать слева, кухня и санузел. Выключатели управляют светом в своих помещениях."
 metadata/interior_bounds_m = Vector3(4.5, 2.6, 8)
 
 [node name="Architecture" type="Node3D" parent="." unique_id=1207259472]
@@ -480,36 +481,50 @@ metadata/description_ru = "Пробная расстановка 19.10.2026. Э�
 [node name="LivingRoom" type="Node3D" parent="Furnishings" unique_id=1281872908]
 
 [node name="ComputerDesk" parent="Furnishings/LivingRoom" unique_id=1371877593 instance=ExtResource("prop_computer_desk_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45, 0, -7.28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6956866, 0.008168399, -7.580889)
 
 [node name="DesktopComputer" parent="Furnishings/LivingRoom" unique_id=1670404256 instance=ExtResource("prop_desktop_computer_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.75, -7.4014306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4456866, 0.7581684, -7.7023196)
 
 [node name="CRTMonitor" parent="Furnishings/LivingRoom" unique_id=67105901 instance=ExtResource("prop_crt_monitor_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.92, -7.4014306)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4456866, 0.9281684, -7.7023196)
 illumination_enabled = true
+
+[node name="ScreenSurface" parent="Furnishings/LivingRoom/CRTMonitor/Model/crt_monitor_01" parent_id_path=PackedInt32Array(67105901, 2067536779, 1159106321) index="6" unique_id=768677631]
+material_override = ExtResource("14_lo2gf")
+
+[node name="ScreenLight" parent="Furnishings/LivingRoom/CRTMonitor" index="2"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.195, 0.242)
+visible = true
 
 [node name="Keyboard" parent="Furnishings/LivingRoom" unique_id=1614136159 instance=ExtResource("prop_keyboard_01")]
-transform = Transform3D(0.9968653, 0, 0.07911796, 0, 1, 0, -0.07911796, 0, 0.9968653, 2.1642091, 0.75, -7.02685)
+transform = Transform3D(0.9968653, 0, 0.07911796, 0, 1, 0, -0.07911796, 0, 0.9968653, 3.4098957, 0.7581684, -7.3277392)
 
 [node name="DeskChair" parent="Furnishings/LivingRoom" unique_id=1693262690 instance=ExtResource("prop_desk_chair_01")]
-transform = Transform3D(-0.69342595, 0, 0.7205278, 0, 1, 0, -0.7205278, 0, -0.69342595, 1.9591012, 0, -6.6303077)
+transform = Transform3D(-0.69342595, 0, 0.7205278, 0, 1, 0, -0.7205278, 0, -0.69342595, 3.1802437, 0.008168399, -7.0406375)
 
 [node name="Radio" parent="Furnishings/LivingRoom" unique_id=235600947 instance=ExtResource("prop_radio_transceiver_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94, 0.75, -7.22)
+transform = Transform3D(0.97187084, 0, -0.23551452, 0, 1, 0, 0.23551452, 0, 0.97187084, 4.00745, 0.75816846, -7.7600365)
 illumination_enabled = true
 
+[node name="CabinetSurface" parent="Furnishings/LivingRoom/Radio/Model/radio_transceiver_01" parent_id_path=PackedInt32Array(235600947, 828090895, 1747383248) index="1" unique_id=381628111]
+instance_shader_parameters/power_led_level = 0.65
+
+[node name="ScaleLight" parent="Furnishings/LivingRoom/Radio" index="10"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.191, 0.101)
+visible = true
+
 [node name="DigitalClock" parent="Furnishings/LivingRoom" unique_id=1942232318 instance=ExtResource("prop_digital_clock_01")]
-transform = Transform3D(0.9814581, 0, 0.19167738, 0, 1, 0, -0.19167738, 0, 0.9814581, 1.8227345, 0.75, -7.1712904)
+transform = Transform3D(0.9814581, 0, 0.19167738, 0, 1, 0, -0.19167738, 0, 0.9814581, 3.068421, 0.7581684, -7.4721794)
 
 [node name="Mug" parent="Furnishings/LivingRoom" unique_id=1917202120 instance=ExtResource("prop_mug_01")]
-transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, 2.4671175, 0.75, -7.0836143)
+transform = Transform3D(0.90630776, 0, -0.42261827, 0, 1, 0, 0.42261827, 0, 0.90630776, 4.2551565, 0.7581685, -7.470474)
 
 [node name="Bed" parent="Furnishings/LivingRoom" unique_id=500524831 instance=ExtResource("prop_single_bed_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62, 0, -6.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62375414, 0.016561806, -6.4125705)
 
 [node name="LowShelf" parent="Furnishings/LivingRoom" unique_id=882970679 instance=ExtResource("prop_low_shelf_01")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.18, 0, -4.35)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.15946692, 0.008168399, -4.332818)
 
 [node name="Window" parent="Furnishings/LivingRoom" unique_id=167575997 instance=ExtResource("prop_window_frame_01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.9, -8.1)
@@ -519,10 +534,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.12, -7.87)
 
 [node name="HangingBulb" parent="Furnishings/LivingRoom" unique_id=169712928 instance=ExtResource("prop_hanging_bulb_01")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 2.6, -5.4)
-metadata/placement_note_ru = "Выключенная лампочка. Источник общего света не добавлен."
+metadata/placement_note_ru = "Свет жилой комнаты; управляется LivingRoomLightSwitch. Изначально выключен."
 
 [node name="PowerStrip" parent="Furnishings/LivingRoom" unique_id=1714058793 instance=ExtResource("prop_power_strip_01")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.0916486, 0.7501457, -7.598213)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.051569, 0.7501457, -7.3525357)
+visible = false
 metadata/placement_note_ru = "Выключен; кабель и подключение ещё не реализованы."
 
 [node name="SparePowerPlug" parent="Furnishings/LivingRoom" unique_id=1982074533 instance=ExtResource("prop_power_plug_01")]
@@ -549,7 +565,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.3,
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, 0.01, 1.62, -1.7)
 
 [node name="CookingPot" parent="Furnishings/Kitchen" unique_id=1721850285 instance=ExtResource("prop_cooking_pot_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.32, 0.905, -2.72)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41143927, 0.905, -2.9540122)
 
 [node name="Bathroom" type="Node3D" parent="Furnishings" unique_id=790662926]
 
@@ -560,7 +576,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14, 0, -2.23)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, 0, -3.28)
 
 [node name="Mirror" parent="Furnishings/Bathroom" unique_id=1704090668 instance=ExtResource("prop_bathroom_mirror_01")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.25, 1.2, -3.285)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 3.25, 1.2, -3.285)
 
 [node name="Toilet" parent="Furnishings/Bathroom" unique_id=52836020 instance=ExtResource("prop_toilet_01")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.25, 0, -1.58)
