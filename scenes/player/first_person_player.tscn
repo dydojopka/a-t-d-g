@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/first_person_player.gd" id="1_player"]
+[ext_resource type="Script" path="res://scripts/player/dark_adaptation.gd" id="2_dark"]
+[ext_resource type="Shader" path="res://shaders/dark_adaptation.gdshader" id="3_vision"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.3
 height = 1.8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vision"]
+render_priority = -100
+shader = ExtResource("3_vision")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vision"]
+size = Vector2(2, 2)
+flip_faces = true
 
 [node name="Player" type="CharacterBody3D"]
 floor_snap_length = 0.2
@@ -21,3 +31,14 @@ current = true
 fov = 60.0
 near = 0.05
 far = 100.0
+
+[node name="DarkAdaptation" type="Node3D" parent="Camera3D"]
+visible = false
+script = ExtResource("2_dark")
+
+[node name="VisionSurface" type="MeshInstance3D" parent="Camera3D/DarkAdaptation"]
+cast_shadow = 0
+extra_cull_margin = 16384.0
+ignore_occlusion_culling = true
+material_override = SubResource("ShaderMaterial_vision")
+mesh = SubResource("QuadMesh_vision")
