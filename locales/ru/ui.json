@@ -8,6 +8,8 @@
   "ui.controls.release_mouse": "[ESC] освободить курсор",
   "ui.controls.capture_mouse": "[ЛКМ] вернуться к осмотру",
   "ui.controls.help": "[F1] подсказки",
+  "ui.interaction.crosshair": "+",
+  "ui.interaction.prompt": "[ E ]",
   "ui.test_room.hint_captured": "[F1] управление  /  [ESC] курсор",
   "ui.test_room.hint_released": "КУРСОР СВОБОДЕН  /  [ЛКМ] продолжить осмотр",
   "ui.test_room.state_walk": "ШАГ",

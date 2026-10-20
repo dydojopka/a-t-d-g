@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/first_person_player.gd" id="1_player"]
 [ext_resource type="Script" path="res://scripts/player/dark_adaptation.gd" id="2_dark"]
 [ext_resource type="Shader" path="res://shaders/dark_adaptation.gdshader" id="3_vision"]
+[ext_resource type="Script" path="res://scripts/player/player_interaction.gd" id="4_interaction"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.3
@@ -32,6 +33,11 @@ fov = 60.0
 near = 0.05
 far = 100.0
 
+[node name="InteractionRay" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -1.8)
+hit_from_inside = true
+script = ExtResource("4_interaction")
+
 [node name="DarkAdaptation" type="Node3D" parent="Camera3D"]
 visible = false
 script = ExtResource("2_dark")
@@ -42,3 +48,29 @@ extra_cull_margin = 16384.0
 ignore_occlusion_culling = true
 material_override = SubResource("ShaderMaterial_vision")
 mesh = SubResource("QuadMesh_vision")
+
+[node name="InteractionHUD" type="CanvasLayer" parent="."]
+layer = 30
+
+[node name="Cursor" type="Label" parent="InteractionHUD"]
+visible = false
+auto_translate_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -18.0
+offset_right = 40.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.84705883, 0.9019608, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(0.03529412, 0.0627451, 0.08627451, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 19
+text = "[ui.interaction.crosshair]"
+horizontal_alignment = 1
+vertical_alignment = 1
