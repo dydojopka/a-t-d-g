@@ -4,7 +4,7 @@
   "ui.controls.movement": "[W A S D] перемещение",
   "ui.controls.look": "[МЫШЬ] осмотр",
   "ui.controls.sprint": "[SHIFT] бег — удерживать",
-  "ui.controls.crouch": "[CTRL] присесть — удерживать",
+  "ui.controls.crouch": "[CTRL] присед / ползание под мебелью — удерживать",
   "ui.controls.release_mouse": "[ESC] освободить курсор",
   "ui.controls.capture_mouse": "[ЛКМ] вернуться к осмотру",
   "ui.controls.help": "[F1] подсказки",
@@ -12,5 +12,6 @@
   "ui.test_room.hint_released": "КУРСОР СВОБОДЕН  /  [ЛКМ] продолжить осмотр",
   "ui.test_room.state_walk": "ШАГ",
   "ui.test_room.state_sprint": "БЕГ",
-  "ui.test_room.state_crouch": "ПРИСЕД"
+  "ui.test_room.state_crouch": "ПРИСЕД",
+  "ui.test_room.state_prone": "ПОЛЗКОМ"
 }

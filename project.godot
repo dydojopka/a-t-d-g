@@ -63,6 +63,10 @@ crouch={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_8="Области ползания"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

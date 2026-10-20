@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b2cak1bc4tlyd"]
+
+[ext_resource type="Script" uid="uid://dufbwl7wnlrxy" path="res://scripts/player/crawl_space.gd" id="1_crawl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ij65j"]
+resource_local_to_scene = true
+size = Vector3(1, 0.7, 1)
+
+[node name="CrawlSpace" type="Area3D" unique_id=563196815]
+collision_layer = 128
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_crawl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1774582066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("BoxShape3D_ij65j")
+debug_color = Color(0, 0.8115838, 0.23751682, 0.3019608)

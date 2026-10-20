@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://assets/props/computer_desk_01/computer_desk_01_shared.glb" id="1_5pjrx"]
 [ext_resource type="Material" path="res://assets/props/computer_desk_01/materials/surface.tres" id="2_pm10r"]
+[ext_resource type="PackedScene" path="res://scenes/player/crawl_space.tscn" id="3_crawl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c6anp"]
 size = Vector3(0.029000044, 0.02, 0.07499999)
@@ -283,5 +284,9 @@ shape = SubResource("BoxShape3D_vxbv8")
 [node name="Shape_Handle_3_mount_-1" type="CollisionShape3D" parent="Model/computer_desk_01/Drawer_03/DrawerCollision" unique_id=859765237]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04699999, 0.148, 0.023999989)
 shape = SubResource("BoxShape3D_p124n")
+
+[node name="CrawlSpace" parent="." instance=ExtResource("3_crawl")]
+position = Vector3(-0.2, 0, 0.1)
+dimensions = Vector3(1.05, 0.7, 0.75)
 
 [editable path="Model"]

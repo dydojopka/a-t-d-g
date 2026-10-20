@@ -27,7 +27,9 @@ func _refresh_capture_hint(captured: bool) -> void:
 
 func _process(_delta: float) -> void:
 	var state := "ui.test_room.state_walk"
-	if player.is_crouching():
+	if player.is_prone():
+		state = "ui.test_room.state_prone"
+	elif player.is_crouching():
 		state = "ui.test_room.state_crouch"
 	elif player.is_sprinting():
 		state = "ui.test_room.state_sprint"
